@@ -22,5 +22,7 @@
 
 ## Week 3 
 
+### 4 Oct 2021 
+
 * *0.5 hour* Created Github repository with basic README.md and .gitignore files 
 * *0.5 hour* Created and updated timelog 
