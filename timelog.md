@@ -26,3 +26,20 @@
 
 * *0.5 hour* Created Github repository with basic README.md and .gitignore files 
 * *0.5 hour* Created and updated timelog 
+
+### 5 Oct 2021
+
+* *0.5 hour* Conducted research into ideas for the project 
+
+### 6 Oct 2021 
+
+* *0.5 hour* Created a basic presentation for the project outline  
+
+### 7 Oct 2021 
+
+* *1 hour* Finished creating the presentation - discusses project outline, goals and plans 
+
+### 8 Oct 2021 
+
+* *1 hour* Presented my project presentation to my supervisors group of supervisees 
+* *0.5 hour* Established a plan for the following week 
