@@ -44,7 +44,14 @@
 * *1 hour* Presented my project presentation to my supervisors group of supervisees 
 * *0.5 hour* Established a plan for the following week 
 
+## Week 4
+
 ### 11 Oct 2021 
 
 * *0.5 hour* Updating the timelog to record work complete in the previous week and create new issues for the week 
 * *1 hour* Conducting research into WebBluetooth, P5js, camera libraries on P5js and Espruino
+
+### 12 Oct 2021
+
+* *0.5 hour* Becoming familar with JavaScript
+* *2 hours* Creating a basic webpage similar to the given one
