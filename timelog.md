@@ -55,3 +55,8 @@
 
 * *0.5 hour* Becoming familar with JavaScript
 * *2 hours* Creating a basic webpage similar to the given one
+
+### 13 Oct 2021 
+
+* *1 hour* Redesigning the basic webpage
+
