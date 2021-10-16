@@ -60,3 +60,19 @@
 
 * *1 hour* Redesigning the basic webpage
 
+### 14 Oct 2021 
+
+* *1 hour* Researching camera APIs 
+
+### 15 Oct 2021 
+
+* *0.5 hour* Meeting with supervisor to discuss progress and plan next weeks goals
+
+### 16 Oct 2021 
+
+* *0.5 hour* Continuing research into camera APIs
+
+### 17 Oct 2021 
+
+
+## Week 5
