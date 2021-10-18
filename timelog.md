@@ -74,5 +74,12 @@
 
 ### 17 Oct 2021 
 
+* No progress
 
+## Week 5
+
+### 18 Oct 2021
+* *0.5 hour* Updating timelog and tidying up GitHub repo
+* *0.5 hour* Start writing up current research
+* *0.5 hour* Creating a plan for the week
 ## Week 5
