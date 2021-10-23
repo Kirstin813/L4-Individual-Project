@@ -82,4 +82,20 @@
 * *0.5 hour* Updating timelog and tidying up GitHub repo
 * *0.5 hour* Start writing up current research
 * *0.5 hour* Creating a plan for the week
-## Week 5
+
+### 19 Oct 2021
+* No progress
+
+### 20 Oct 2021
+* *3 hours* Writing up research on LateX
+
+### 21 Oct 2021 
+* *1 hour* Implementing the browser to access the camera on a smartphone
+* *0.5 hour* Fixing some bugs 
+
+### 22 Oct 2021 
+* *0.5 hour* Meeting with supervisor to discuss progress and sort out issues I have come across 
+* *1 hour* Continuing research into certain areas of the project 
+
+### 23 Oct 2021 
+* No progress 
