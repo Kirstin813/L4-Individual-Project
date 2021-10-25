@@ -1,1 +1,2 @@
-//This will be a list of files that can be ignored when pushing new commits.
+.DS_Store
+.pdf
