@@ -106,4 +106,18 @@
 ## Week 6
 
 ### 25 Oct 2021 
-* *1 hour* Updated timelog and updated the GitHub repository with the given template  
+* *1 hour* Updated timelog and updated the GitHub repository with the given template
+
+### 26 Oct 2021
+* *1 hour* Created a new sketch on p5js to make a separate webpage for following an object 
+
+### 27 Oct 2021 
+* *2 hours* Implemented colour tracking via the browser by clicking on a colour that you want to be tracked
+* *1 hour* Implementing a way to use the position of the tracked colour to move the robot 
+
+### 28 Oct 2021 
+* *2 hours* Continuing implementation of following a coloured object 
+* *0.5 hour* Fix an issue that resulted the object following being a bit laggy 
+* *0.5 hour* Updated supervisor on progress and prepped for the upcoming meeting 
+
+### 29 Oct 2021  
