@@ -37,6 +37,10 @@ Updated at the start of each week. Will outline plan for the week and what is ex
     * Devise a plan for the next stage of the project - follow a face using the camera via web browser 
     * Start research into APIs or relevant information that would be beneficial in the next stage
 * **Week 7**
+    * Add improvements suggested by supervisor 
+    * Record a demo featuring the new improvements to present to supervisor 
+    * Continue additional research into face api's
+    * Start working on the next stage by allowing the camera to detect a face
 * **Week 8**
 * **Week 9**
 * **Week 10**

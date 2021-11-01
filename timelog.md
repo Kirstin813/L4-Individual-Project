@@ -121,3 +121,18 @@
 * *0.5 hour* Updated supervisor on progress and prepped for the upcoming meeting 
 
 ### 29 Oct 2021  
+* *0.5 hour* Meeting with supervisor to discuss progress and issues 
+* *0.5 hour* Developed a plan for the following week 
+
+### 30 Oct 2021 
+* *0.5 hour* Additional research in preparation for the next stage
+
+### 31 Oct 2021 
+* No progress
+
+## Week 7
+
+### 1 Nov 2021 
+* *0.5 hour* Adding code to src and adding to the weekly plan and timelog
+
+
