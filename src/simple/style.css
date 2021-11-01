@@ -1,0 +1,61 @@
+/*html, body {
+  height: 100%;
+  wid100%;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+}*/
+.connection {
+  text-align: center;
+  color: white;
+  padding: 20px 48px;
+  background-color: black;
+  font-size: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  display: relative;
+  
+}
+
+.action {
+  text-align: center;
+  color: white;
+  padding: 40px 96px;
+  background-color: #407294;
+  font-weight: 800;
+  border-style: solid;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.jc {
+  justify-content: center;
+}
+
+.margin-right {
+  margin-right: 40px;
+}
+
+.margin-bottom {
+  margin-bottom: 40px;
+}
+
+.center {
+  height: 200px;
+  width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -200px;
+}
+
+
+
+

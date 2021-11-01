@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    
+    <script src="uart.js"></script>
+
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+    <div>
+      <button onclick="connect();" class="connection">Connect</button>
+      <button onclick="disconnect();" class="connection">Disconnect</button>
+    </div>
+    
+    <div class="center">
+      <div class="flex jc">
+        <button onclick="forward();" class="action margin-bottom">Forward</button>
+      </div>
+      <div class="flex jc">
+        <button onclick="left();" class="action margin-right margin-bottom">Left</button>
+        <button onclick="stop();" class="action margin-right margin-bottom">Stop</button>
+        <button onclick="right();" class="action margin-bottom">Right</button>
+      </div>
+      <div class="flex jc">
+        <button onclick="backward();" class="action">Backward</button>
+      </div>
+    </div>
+      
+  
+
+</body></html>
