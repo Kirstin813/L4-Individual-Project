@@ -135,4 +135,32 @@
 ### 1 Nov 2021 
 * *0.5 hour* Adding code to src and adding to the weekly plan and timelog
 
+### 2 Nov 2021 
+* *1 hour* Implementing suggested changes to the interface of the webpage 
+* *0.5 hour* Running simlple tests to make sure it works  
+
+### 3 Nov 2021 
+* *0.5 hour* Further research into FaceAPIs 
+
+### 4 Nov 2021 
+* *1 hour* Fixing a bug - the camera being accessed on the smartphone was the front facing camera and not the back camera as intended 
+
+### 5 Nov 2021
+* *1 hour* Fixing another bug - When clicking on the stop button, the mouseClick event thinks it is a new colour to follow so I've changed it to only choose a new colour to follow within the size of the canvas 
+
+### 6 Nov 2021 
+* No progress 
+
+### 7 Nov 
+* *0.5 hour* Spent time revising a plan for the following week 
+* *0.5 hour* Set up Android phone for demos
+
+## Week 8 
+
+### 8 Nov 
+* *1 hour* Testing with Android phone to make sure it follows a coloured object 
+* *0.5 hour* Fixing a few tiny bugs - Stop button wasn't working again 
+* *1 hour* Recorded a demo 
+
+### 9 Nov 
 

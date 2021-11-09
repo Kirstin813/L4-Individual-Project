@@ -42,6 +42,10 @@ Updated at the start of each week. Will outline plan for the week and what is ex
     * Continue additional research into face api's
     * Start working on the next stage by allowing the camera to detect a face
 * **Week 8**
+    * Finish off any tasks that had not been completed from the previous week 
+    * Make the camera detect a face 
+    * Using the same technique from stage 1, follow the face and move the robot with respect to the position of the face on the canvas 
+    * Report findings and update progress to supervisor
 * **Week 9**
 * **Week 10**
 * **Week 11 [PROJECT WEEK]**
