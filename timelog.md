@@ -137,7 +137,7 @@
 
 ### 2 Nov 2021 
 * *1 hour* Implementing suggested changes to the interface of the webpage 
-* *0.5 hour* Running simlple tests to make sure it works  
+* *0.5 hour* Running simple tests to make sure it works  
 
 ### 3 Nov 2021 
 * *0.5 hour* Further research into FaceAPIs 
@@ -163,4 +163,16 @@
 * *1 hour* Recorded a demo 
 
 ### 9 Nov 
+* No progress
 
+### 10 Nov
+* *1 hour* Recorded demos to demonstrate progress 
+* *0.5 hour* Centering the video feed 
+* *0.5 hour* Attempting to implement the video feed being accessed by both a smartphone and a desktop
+
+### 11 Nov 
+* *1 hour* Spent time writting up all progress made for supervisor 
+* 1 hour* Started implementation with faceAPIs
+
+### 12 Nov 
+• No progress 
