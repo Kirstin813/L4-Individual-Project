@@ -47,6 +47,10 @@ Updated at the start of each week. Will outline plan for the week and what is ex
     * Using the same technique from stage 1, follow the face and move the robot with respect to the position of the face on the canvas 
     * Report findings and update progress to supervisor
 * **Week 9**
+    * New issue developed over the weekend, connection using web Bluetooth stopped working on p5.js so it is a priority to solve this issue
+    * Continue with the implementation of the faceAPI, allowing the robot to move according to the position of the face 
+    * Start research on the next stage of the project (follow a black line)
+    * Present all demos and findings to supervisor during the weekly meeting 
 * **Week 10**
 * **Week 11 [PROJECT WEEK]**
 * **Week 12 [PROJECT WEEK]** Status report submitted.

@@ -172,7 +172,27 @@
 
 ### 11 Nov 
 * *1 hour* Spent time writting up all progress made for supervisor 
-* 1 hour* Started implementation with faceAPIs
+* *1 hour* Started implementation with faceAPIs
 
 ### 12 Nov 
-• No progress 
+# No progress 
+
+### 13 Nov 
+* *1 hour* Continued with faceAPI implementation using ml5.js
+* *1 hour* Continued with faceAPI implementation using MediaPipe
+
+### 14 Nov 
+* *1 hour* Finishing the implementation of the faceAPI using MediaPipe 
+
+
+## Week 9 
+
+### 15 Nov 
+* No progress
+
+### 16 Nov 
+* *0.5 hour* Came across a recent issue, spent time looking into the issue 
+* *1 hour* Issue with uart connecton not working on the choosen hosting page, tested connection on GitHub pages 
+* *0.5 hour* Updating supervisor about the issue 
+* *0.5 hour* Testing other aspects of the project on GitHub pages to make sure the connection works
+
