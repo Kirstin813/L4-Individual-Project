@@ -1,17 +1,67 @@
 let video;
+let switchFlag = false;
+let switchButton;
 let colourMatch;
 let tolerance = 15; //allows a tolerance buffer as the colour match will not be exact so as long as the colour falls into the range then its a good colour match 
 
+var options = {
+  video: {
+    faceingMode: {
+      exact: "user"
+    }
+  }
+};
 
 function setup() {
   createCanvas(640, 480); 
-  video = createCapture(VIDEO); //creates a HTML5 video using the webcam or the camera on a smartphone 
+  video = createCapture(options); //creates a HTML5 video using the webcam or the camera on a smartphone 
   video.size(640, 480); //resize the video to fit the display width and height 
   video.hide(); //hide the video feed 
   pixelDensity(1);
   noStroke();
+
+  switchButton = createButton('Switch Camera');
+  switchButton.position(19, 19);
+  switchButton.mousePressed(switchCamera);
   
   colourMatch = color(255, 150, 0);  //initial colour to match 
+}
+
+function switchCamera() {
+  switchFlag = !switchFlag;
+  stopCapture();
+  if(switchFlag == true) {
+    video.remove();
+    options = {
+      video: {
+        facingMode: {
+          exact: "environment"
+        }
+      }
+    };
+  } else {
+    video.remove();
+    options = {
+      video: {
+        facingMode: {
+          exact: "user"
+        }
+      }
+    };
+  }
+
+  video = createCapture(options);
+}
+
+function stopCatpure() {
+  let stream = video.elt.srcObject;
+  let tracks = stream.getTracks();
+
+  tracks.forEach(function(track) {
+    track.stop();
+  });
+
+  video.elt.srcObject = null;
 }
 
 function draw() {
