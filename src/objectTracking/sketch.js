@@ -29,7 +29,7 @@ function setup() {
 
 function switchCamera() {
   switchFlag = !switchFlag;
-  //stopCapture();
+  stopCapture();
   if(switchFlag == true) {
     video.remove();
     options = {
@@ -53,7 +53,7 @@ function switchCamera() {
   video = createCapture(options);
 }
 
-function stopCatpure() {
+function stopCapture() {
   let stream = video.elt.srcObject;
   let tracks = stream.getTracks();
 
