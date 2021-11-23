@@ -29,7 +29,7 @@ function setup() {
 
 function switchCamera() {
   switchFlag = !switchFlag;
-  stopCapture();
+  //stopCapture();
   if(switchFlag == true) {
     video.remove();
     options = {
