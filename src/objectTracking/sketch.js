@@ -53,7 +53,7 @@ function switchCamera() {
   video = createCapture(options);
   video.size(640, 480); //resize the video to fit the display width and height 
   video.hide(); //hide the video feed 
-  pixelDensity(1);
+  //pixelDensity(1);
   noStroke();
 }
 
