@@ -40,6 +40,10 @@ function setup() {
   colourMatch = color(255, 150, 0);  //initial colour to match 
 }
 
+function newSelection() {
+  console.log(dropdown.value());
+}
+
 function switchCamera(constraints) {
   //switchFlag = !switchFlag;
   stopCapture();
