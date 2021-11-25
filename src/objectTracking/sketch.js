@@ -84,7 +84,7 @@ function stopCapture() {
 
 function draw() {
   image(video, 0, 0); //draw the video feed onto the canvas 
-  text("If using a smartphone, press button to use back camera", 15, 100);
+  text("If using a smartphone, press button to use back camera", 0, 50);
   
   let colourPixel = findColour(video, colourMatch, tolerance); // finds the first pixel of the colour that we want to match 
   
