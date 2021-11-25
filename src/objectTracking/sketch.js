@@ -1,16 +1,9 @@
 let video;
-let switchFlag = false;
+//let switchFlag = false;
 let switchButton;
 let colourMatch;
 let tolerance = 15; //allows a tolerance buffer as the colour match will not be exact so as long as the colour falls into the range then its a good colour match 
 
-var options = {
-  video: {
-    faceingMode: {
-      exact: "user"
-    }
-  }
-};
 
 function setup() {
   var canvas = createCanvas(640, 480); 
@@ -27,6 +20,15 @@ function setup() {
   dropdown.option('Front Facing Camera');
   dropdown.option('Back Facing Camera');
   dropdown.changed(newSelection);
+
+
+  var options = {
+    video: {
+      faceingMode: {
+        exact: "user"
+      }
+    }
+  };
 
   video = createCapture(options); //creates a HTML5 video using the webcam or the camera on a smartphone 
   video.size(640, 480); //resize the video to fit the display width and height 
@@ -70,7 +72,7 @@ function stopCapture() {
 
 function draw() {
   //background(220);
-  image(video, 0, 0); //draw the video feed onto the canvas 
+   //draw the video feed onto the canvas 
 
   if (dropdown.value() == 'Front Facing Camera') {
     var constraints = {
@@ -81,6 +83,7 @@ function draw() {
       }
     };
     switchCamera(options);
+    image(video, 0, 0);
   } else if (dropdown.value() == 'Back Facing Camera') {
     var constraints = {
       video: {
@@ -90,6 +93,7 @@ function draw() {
       }
     };
     switchCamera(constraints);
+    image(video, 0, 0);
   }
   
   let colourPixel = findColour(video, colourMatch, tolerance); // finds the first pixel of the colour that we want to match 
