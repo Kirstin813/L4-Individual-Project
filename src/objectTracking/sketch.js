@@ -3,7 +3,6 @@ let switchFlag = false;
 let switchButton;
 let colourMatch;
 let tolerance = 15; //allows a tolerance buffer as the colour match will not be exact so as long as the colour falls into the range then its a good colour match 
-//let dropdown;
 let options;
 
 function setup() {
@@ -15,6 +14,7 @@ function setup() {
   canvas.position(x, y);
 
 
+  /*default option is front facing camera*/
   options = {
     video: {
       faceingMode: {
@@ -29,6 +29,8 @@ function setup() {
   pixelDensity(1);
   noStroke();
 
+
+  /* Adding a "switch camera" button to be able to switch the camera using createCapture*/
   switchButton = createButton('Switch Camera');
   switchButton.position(19, 100);
   switchButton.mousePressed(switchCamera);
@@ -37,12 +39,12 @@ function setup() {
 }
 
 
-
+/* function to switch the camera depending if the switchFlag has been set to true or false*/
 function switchCamera() {
   switchFlag = !switchFlag;
-  stopCapture();
+  stopCapture(); //stops the current createCapture
   if(switchFlag == true) {
-    video.remove();
+    video.remove(); //removes the video currently being captured
     options = {
       video: {
         facingMode: {
@@ -60,13 +62,15 @@ function switchCamera() {
       }
     };
   }
-  video = createCapture(options);
+
+  video = createCapture(options); // create a new capture using the updated options 
   video.size(640, 480); //resize the video to fit the display width and height 
   video.hide(); //hide the video feed 
   //pixelDensity(1);
   noStroke();
 }
 
+/* function to stop the current capture*/
 function stopCapture() {
   let stream = video.elt.srcObject;
   let tracks = stream.getTracks();
@@ -79,8 +83,8 @@ function stopCapture() {
 }
 
 function draw() {
-  //background(220);
-  image(video, 0, 0);//draw the video feed onto the canvas 
+  image(video, 0, 0); //draw the video feed onto the canvas 
+  text("If using a smartphone, press button to use back camera", 19, 80);
   
   let colourPixel = findColour(video, colourMatch, tolerance); // finds the first pixel of the colour that we want to match 
   
