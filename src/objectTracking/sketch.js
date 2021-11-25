@@ -17,24 +17,24 @@ function setup() {
   dropdown = createSelect();
 
   dropdown.option('--');
-  dropdown.option('Front Facing Camera');
+  //dropdown.option('Front Facing Camera');
   dropdown.option('Back Facing Camera');
   dropdown.changed(newSelection);
 
 
-  /*var options = {
+  var options = {
     video: {
       faceingMode: {
         exact: "user"
       }
     }
-  };*/
+  };
 
-  //video = createCapture(options); //creates a HTML5 video using the webcam or the camera on a smartphone 
-  //video.size(640, 480); //resize the video to fit the display width and height 
-  //video.hide(); //hide the video feed 
-  //pixelDensity(1);
-  //noStroke();
+  video = createCapture(options); //creates a HTML5 video using the webcam or the camera on a smartphone 
+  video.size(640, 480); //resize the video to fit the display width and height 
+  video.hide(); //hide the video feed 
+  pixelDensity(1);
+  noStroke();
 
   //switchButton = createButton('Switch Camera');
   //switchButton.position(19, 100);
@@ -49,8 +49,8 @@ function newSelection() {
 
 function switchCamera(constraints) {
   //switchFlag = !switchFlag;
-  //stopCapture();
-  //video.remove();
+  stopCapture();
+  video.remove();
 
   video = createCapture(constraints);
   video.size(640, 480); //resize the video to fit the display width and height 
@@ -72,19 +72,10 @@ function stopCapture() {
 
 function draw() {
   //background(220);
-   //draw the video feed onto the canvas 
+  image(video, 0, 0);//draw the video feed onto the canvas 
 
-  if (dropdown.value() == 'Front Facing Camera') {
-    var constraints = {
-      video: {
-        faceingMode: {
-          exact: "user"
-        }
-      }
-    };
-    switchCamera(options);
-    image(video, 0, 0);
-  } else if (dropdown.value() == 'Back Facing Camera') {
+  if (dropdown.value() == 'Back Facing Camera') {
+    text("Hello");
     var constraints = {
       video: {
         faceingMode: {
