@@ -4,6 +4,7 @@ let switchButton;
 let colourMatch;
 let tolerance = 15; //allows a tolerance buffer as the colour match will not be exact so as long as the colour falls into the range then its a good colour match 
 let dropdown;
+let options;
 
 function setup() {
   var canvas = createCanvas(640, 480); 
@@ -22,7 +23,7 @@ function setup() {
   dropdown.changed(newSelection);
 
 
-  var options = {
+  options = {
     video: {
       faceingMode: {
         exact: "user"
@@ -44,15 +45,25 @@ function setup() {
 }
 
 function newSelection() {
-  console.log(dropdown.value());
+  if (dropdown.value() == 'Back Facing Camera') {
+    options = {
+      video: {
+        faceingMode: {
+          exact: "environment"
+        }
+      }
+    };
+    switchCamera(options);
+    //image(video, 0, 0);
+  }
 }
 
-function switchCamera(constraints) {
+function switchCamera(options) {
   //switchFlag = !switchFlag;
   stopCapture();
   video.remove();
 
-  video = createCapture(constraints);
+  video = createCapture(options);
   video.size(640, 480); //resize the video to fit the display width and height 
   video.hide(); //hide the video feed 
   //pixelDensity(1);
@@ -73,19 +84,6 @@ function stopCapture() {
 function draw() {
   //background(220);
   image(video, 0, 0);//draw the video feed onto the canvas 
-
-  if (dropdown.value() == 'Back Facing Camera') {
-    text("Hello");
-    var constraints = {
-      video: {
-        faceingMode: {
-          exact: "environment"
-        }
-      }
-    };
-    switchCamera(constraints);
-    image(video, 0, 0);
-  }
   
   let colourPixel = findColour(video, colourMatch, tolerance); // finds the first pixel of the colour that we want to match 
   
