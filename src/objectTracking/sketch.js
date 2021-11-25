@@ -23,6 +23,7 @@ function setup() {
 
   dropdown = createSelect();
 
+  dropdown.option('--');
   dropdown.option('Front Facing Camera');
   dropdown.option('Back Facing Camera');
   dropdown.changed(newSelection);
