@@ -1,6 +1,6 @@
 let video;
 //let switchFlag = false;
-let switchButton;
+//let switchButton;
 let colourMatch;
 let tolerance = 15; //allows a tolerance buffer as the colour match will not be exact so as long as the colour falls into the range then its a good colour match 
 let dropdown;
@@ -45,20 +45,23 @@ function setup() {
 }
 
 function newSelection() {
+  stopCapture();
   if (dropdown.value() == 'Back Facing Camera') {
-    options = {
+
+    video.remove();
+    video = createCapture({
+      audio: false,
       video: {
         faceingMode: {
           exact: "environment"
         }
       }
-    };
-    switchCamera(options);
+    });
     //image(video, 0, 0);
   }
 }
 
-function switchCamera(options) {
+/*function switchCamera(options) {
   //switchFlag = !switchFlag;
   stopCapture();
   video.remove();
@@ -68,7 +71,7 @@ function switchCamera(options) {
   video.hide(); //hide the video feed 
   //pixelDensity(1);
   noStroke();
-}
+}*/
 
 function stopCapture() {
   let stream = video.elt.srcObject;
