@@ -38,14 +38,14 @@ function setup() {
 
 
 
-function switchCamera(options) {
+function switchCamera() {
   switchFlag = !switchFlag;
   stopCapture();
   if(switchFlag == true) {
     video.remove();
     options = {
       video: {
-        faceingMode: {
+        facingMode: {
           exact: "environment"
         }
       }
@@ -54,7 +54,7 @@ function switchCamera(options) {
     video.remove();
     options = {
       video: {
-        faceingMode: {
+        facingMode: {
           exact: "user"
         }
       }
