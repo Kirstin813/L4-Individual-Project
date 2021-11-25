@@ -40,12 +40,12 @@ function setup() {
   colourMatch = color(255, 150, 0);  //initial colour to match 
 }
 
-function switchCamera(options) {
+function switchCamera(constraints) {
   //switchFlag = !switchFlag;
   stopCapture();
   video.remove();
 
-  video = createCapture(options);
+  video = createCapture(constraints);
   video.size(640, 480); //resize the video to fit the display width and height 
   video.hide(); //hide the video feed 
   //pixelDensity(1);
@@ -68,7 +68,7 @@ function draw() {
   image(video, 0, 0); //draw the video feed onto the canvas 
 
   if (dropdown.value() == 'Front Facing Camera') {
-    options = {
+    var constraints = {
       video: {
         faceingMode: {
           exact: "user"
@@ -77,14 +77,14 @@ function draw() {
     };
     switchCamera(options);
   } else if (dropdown.value() == 'Back Facing Camera') {
-    options = {
+    var constraints = {
       video: {
         faceingMode: {
           exact: "environment"
         }
       }
     };
-    switchCamera(options);
+    switchCamera(constraints);
   }
   
   let colourPixel = findColour(video, colourMatch, tolerance); // finds the first pixel of the colour that we want to match 
