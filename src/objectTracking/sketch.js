@@ -1,9 +1,9 @@
 let video;
-//let switchFlag = false;
-//let switchButton;
+let switchFlag = false;
+let switchButton;
 let colourMatch;
 let tolerance = 15; //allows a tolerance buffer as the colour match will not be exact so as long as the colour falls into the range then its a good colour match 
-let dropdown;
+//let dropdown;
 let options;
 
 function setup() {
@@ -13,14 +13,6 @@ function setup() {
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   canvas.position(x, y);
-
-
-  dropdown = createSelect();
-
-  dropdown.option('--');
-  //dropdown.option('Front Facing Camera');
-  dropdown.option('Back Facing Camera');
-  dropdown.changed(newSelection);
 
 
   options = {
@@ -37,41 +29,43 @@ function setup() {
   pixelDensity(1);
   noStroke();
 
-  //switchButton = createButton('Switch Camera');
-  //switchButton.position(19, 100);
-  //switchButton.mousePressed(switchCamera);
+  switchButton = createButton('Switch Camera');
+  switchButton.position(19, 100);
+  switchButton.mousePressed(switchCamera);
   
   colourMatch = color(255, 150, 0);  //initial colour to match 
 }
 
-function newSelection() {
-  stopCapture();
-  if (dropdown.value() == 'Back Facing Camera') {
 
+
+function switchCamera(options) {
+  switchFlag = !switchFlag;
+  stopCapture();
+  if(switchFlag == true) {
     video.remove();
-    video = createCapture({
-      audio: false,
+    options = {
       video: {
         faceingMode: {
           exact: "environment"
         }
       }
-    });
-    //image(video, 0, 0);
+    };
+  } else {
+    video.remove();
+    options = {
+      video: {
+        faceingMode: {
+          exact: "user"
+        }
+      }
+    };
   }
-}
-
-/*function switchCamera(options) {
-  //switchFlag = !switchFlag;
-  stopCapture();
-  video.remove();
-
   video = createCapture(options);
   video.size(640, 480); //resize the video to fit the display width and height 
   video.hide(); //hide the video feed 
   //pixelDensity(1);
   noStroke();
-}*/
+}
 
 function stopCapture() {
   let stream = video.elt.srcObject;
