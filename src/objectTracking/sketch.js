@@ -13,42 +13,37 @@ var options = {
 };
 
 function setup() {
-  createCanvas(640, 480); 
+  var canvas = createCanvas(640, 480); 
+
+  /*Center the video*/
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  canvas.position(x, y);
+
+
+  dropdown = createSelect();
+
+  dropdown.option('Front Facing Camera');
+  dropdown.option('Back Facing Camera');
+  dropdown.changed(newSelection);
+
   video = createCapture(options); //creates a HTML5 video using the webcam or the camera on a smartphone 
   video.size(640, 480); //resize the video to fit the display width and height 
   video.hide(); //hide the video feed 
-  pixelDensity(1);
+  //pixelDensity(1);
   noStroke();
 
-  switchButton = createButton('Switch Camera');
-  switchButton.position(19, 19);
-  switchButton.mousePressed(switchCamera);
+  //switchButton = createButton('Switch Camera');
+  //switchButton.position(19, 100);
+  //switchButton.mousePressed(switchCamera);
   
   colourMatch = color(255, 150, 0);  //initial colour to match 
 }
 
-function switchCamera() {
-  switchFlag = !switchFlag;
+function switchCamera(options) {
+  //switchFlag = !switchFlag;
   stopCapture();
-  if(switchFlag == true) {
-    video.remove();
-    options = {
-      video: {
-        facingMode: {
-          exact: "environment"
-        }
-      }
-    };
-  } else {
-    video.remove();
-    options = {
-      video: {
-        facingMode: {
-          exact: "user"
-        }
-      }
-    };
-  }
+  video.remove();
 
   video = createCapture(options);
   video.size(640, 480); //resize the video to fit the display width and height 
@@ -71,6 +66,26 @@ function stopCapture() {
 function draw() {
   //background(220);
   image(video, 0, 0); //draw the video feed onto the canvas 
+
+  if (dropdown.value() == 'Front Facing Camera') {
+    options = {
+      video: {
+        faceingMode: {
+          exact: "user"
+        }
+      }
+    };
+    switchCamera(options);
+  } else if (dropdown.value() == 'Back Facing Camera') {
+    options = {
+      video: {
+        faceingMode: {
+          exact: "environment"
+        }
+      }
+    };
+    switchCamera(options);
+  }
   
   let colourPixel = findColour(video, colourMatch, tolerance); // finds the first pixel of the colour that we want to match 
   
@@ -92,10 +107,19 @@ function draw() {
 function move(colourPixel) {
       if ( (colourPixel.x<=width/3) && (colourPixel.x>=0) ) {
         left();
+        textSize(20);
+        fill(255);
+        text("Moving Robot Left", 10, 470);
       } else if ( (colourPixel.x > width/3) && (colourPixel.x < 2*width/3) ) {
         forward();
+        textSize(20);
+        fill(255);
+        text("Moving Robot Forward", 10, 470);
       } else if ( (colourPixel.x > 2*width/3) && (colourPixel.x < width)) {
         right();
+        textSize(20);
+        fill(255);
+        text("Moving Robot Right", 10, 470);
       }
   
 }
@@ -103,7 +127,10 @@ function move(colourPixel) {
 // this function allows you to click on any colour on the screen to be set as the colour to be matched.
 function mousePressed() {
     loadPixels();
-    colourMatch = get(mouseX, mouseY);
+    if (mouseY < height && mouseY > 0) {
+      colourMatch = get(mouseX, mouseY);
+    }
+    
 }
 
 function findColour(vidInput, colour, tolerance) {
