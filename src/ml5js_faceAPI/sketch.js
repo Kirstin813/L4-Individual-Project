@@ -11,8 +11,16 @@ const detectionOptions = {
 
 function setup() {
   createCanvas(640, 480);
+
+  var options = {
+    video: {
+      faceingMode: {
+        exact: "user"
+      }
+    }
+  };
   
-  video = createCapture(VIDEO);
+  video = createCapture(options);
   video.size(640, 480);
   video.hide();
   faceapi = ml5.faceApi(video, detectionOptions, modelReady);
