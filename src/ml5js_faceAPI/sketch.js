@@ -11,16 +11,8 @@ const detectionOptions = {
 
 function setup() {
   createCanvas(640, 480);
-
-  var options = {
-    video: {
-      faceingMode: {
-        exact: "user"
-      }
-    }
-  };
   
-  video = createCapture(options);
+  video = createCapture(VIDEO);
   video.size(640, 480);
   video.hide();
   faceapi = ml5.faceApi(video, detectionOptions, modelReady);
@@ -43,9 +35,6 @@ function gotResults(err, result) {
   
   background(255);
   image(video, 0, 0, 640, 480);
-
-  // could draw on own facial features
-
   if (detections) {
     if (detections.length > 0) {
       drawBox(detections);
@@ -58,14 +47,15 @@ function gotResults(err, result) {
 }
 
 function follow(detections) {
-  for (let i = 0; i < detections.length; i+= 1) {
-    const nose = detections[i].parts.nose;
-
-    for (let j = 0; j < nose.length; i += 1) {
-      noseX = nose[i]._x;
-      noseY = nose[i]._y;
-
-
+  for (let i = 0; i < detections.length; i += 1) {
+    const nose = detections[i].parts.nose;//._x;
+    
+    drawPart(nose, false);
+    
+    for (let j = 0; j < nose.length; j += 1) {
+      noseX = nose[j]._x;
+      noseY = nose[j]._y;
+      
       if ((noseX <= width/3) && (noseX>=0)) {
         textSize(20);
         fill(255);
@@ -79,8 +69,10 @@ function follow(detections) {
         fill(255);
         text("Moving Robot Right", 10, 470);
       }
+      console.log(noseX);
     }
-    // track the nose as a starting point
+    
+    
   }
 }
 
