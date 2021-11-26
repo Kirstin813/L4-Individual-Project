@@ -63,15 +63,15 @@ function follow(detections) {
       if ((noseX <= width/3) && (noseX>=0)) {
         textSize(20);
         fill(255);
-        text("Moving Robot Left", 10, 470);
+        text("Moving Robot Left", 180, 470);
       } else if ((noseX > width/3) && (noseX <2*width/3)) {
         textSize(20);
         fill(255);
-        text("Moving Robot Forward", 10, 470);
+        text("Moving Robot Forward", 220, 470);
       } else if ((noseX > 2*width/3) && (noseX <width)) {
         textSize(20);
         fill(255);
-        text("Moving Robot Right", 10, 470);
+        text("Moving Robot Right", 100, 470);
       }
       console.log(noseX);
     }
