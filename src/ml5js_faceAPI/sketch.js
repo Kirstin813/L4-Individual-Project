@@ -1,6 +1,8 @@
 let faceapi;
 let video;
 let detections;
+let noseX = 0;
+let noseY = 0;
 
 const detectionOptions = {
   withLandmarks: true,
@@ -33,14 +35,45 @@ function gotResults(err, result) {
   
   background(255);
   image(video, 0, 0, 640, 480);
+
+  // could draw on own facial features
+
   if (detections) {
     if (detections.length > 0) {
       drawBox(detections);
-      drawLandmarks(detections);
+      follow(detections);
+      //drawLandmarks(detections);
     }
   }
   
   faceapi.detect(gotResults);
+}
+
+function follow(detections) {
+  for (let i = 0; i < detections.length; i+= 1) {
+    const nose = detections[i].parts.nose;
+
+    for (let j = 0; j < nose.length; i += 1) {
+      noseX = nose[i]._x;
+      noseY = nose[i]._y;
+
+
+      if ((noseX <= width/3) && (noseX>=0)) {
+        textSize(20);
+        fill(255);
+        text("Moving Robot Left", 10, 470);
+      } else if ((noseX > width/3) && (noseX <2*width/3)) {
+        textSize(20);
+        fill(255);
+        text("Moving Robot Forward", 10, 470);
+      } else if ((noseX > 2*width/3) && (noseX <width)) {
+        textSize(20);
+        fill(255);
+        text("Moving Robot Right", 10, 470);
+      }
+    }
+    // track the nose as a starting point
+  }
 }
 
 function drawBox(detections) {
