@@ -10,50 +10,64 @@ Updated at the start of each week. Will outline plan for the week and what is ex
 
 ## Winter semester
 
-* **Week 1**
+* **Week 0**
     * Bidding week for project allocation - Ranked projects into top 8 choices
-* **Week 2**
+* **Week 1**
     * Project allocation to be expected at the beginning of the week
     * Initial meeting with the project supervisor to discuss project requirements and outline a plan 
     * Begin research into topics relevant to the project
-* **Week 3**
+* **Week 2**
     * Pick up self-driving robot
     * Continue research into the project 
     * Set up basic repository until a repository template is released 
     * Create a presentation outlining the scope of the project and the current approach/plan 
     * Presentation scope of the project to my supervisor's supervisees 
-* **Week 4**
+* **Week 3**
     * Conduct further research into specific topics i.e. WebBluettoth, P5js, Espruino, and camera libraries 
     * Create my own basic JS webpage to connect to the robot and move it about 
     * Research into camera APIs
     * Have my weekly meeting with my supervisor 
-* **Week 5**
+* **Week 4**
     * Write up all relevant research into LaTeX
     * Implement a webpage to access the camera via the web browser 
     * Discuss progress and issues during the weekly supervisor meeting 
-* **Week 6**
+* **Week 5**
     * Finish implementing the webpage that will access the camera and follow a red object 
     * Create a demo of this in action to present to my supervisor during our weekly meeting 
     * Devise a plan for the next stage of the project - follow a face using the camera via web browser 
     * Start research into APIs or relevant information that would be beneficial in the next stage
-* **Week 7**
+* **Week 6**
     * Add improvements suggested by supervisor 
     * Record a demo featuring the new improvements to present to supervisor 
     * Continue additional research into face api's
     * Start working on the next stage by allowing the camera to detect a face
-* **Week 8**
+* **Week 7**
     * Finish off any tasks that had not been completed from the previous week 
     * Make the camera detect a face 
     * Using the same technique from stage 1, follow the face and move the robot with respect to the position of the face on the canvas 
     * Report findings and update progress to supervisor
-* **Week 9**
+* **Week 8**
     * New issue developed over the weekend, connection using web Bluetooth stopped working on p5.js so it is a priority to solve this issue
     * Continue with the implementation of the faceAPI, allowing the robot to move according to the position of the face 
     * Start research on the next stage of the project (follow a black line)
     * Present all demos and findings to supervisor during the weekly meeting 
+* **Week 9**
+    * Transferring implementations to GitHub pages which will now be the main hosting platform 
+    * Continue with faceAPI implementation 
+    * Meeting with supervisor 
+    * Start implementation on nose tracking for faceAPI
 * **Week 10**
-* **Week 11 [PROJECT WEEK]**
-* **Week 12 [PROJECT WEEK]** Status report submitted.
+    * Continue and finish implementation of switching between cameras 
+    * Continue with faceAPI implementation using the nose as the main tracking feature 
+    * Meeting with supervisor 
+    * Update GitHub
+* **Week 11** 
+    * Update all changes to the repository - timelog, plan, readme 
+    * finish both faceAPI implementation using the nose tracking feature 
+    * Record a demo for supervisor to review 
+    * Devise a detailed plan for the project week
+* **Week 12 [PROJECT WEEK]**
+* **Week 13 [PROJECT WEEK]** Status report submitted.
 
 ## Winter break
 

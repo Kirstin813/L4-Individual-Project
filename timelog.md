@@ -151,48 +151,100 @@
 ### 6 Nov 2021 
 * No progress 
 
-### 7 Nov 
+### 7 Nov 2021
 * *0.5 hour* Spent time revising a plan for the following week 
 * *0.5 hour* Set up Android phone for demos
 
 ## Week 8 
 
-### 8 Nov 
+### 8 Nov 2021
 * *1 hour* Testing with Android phone to make sure it follows a coloured object 
 * *0.5 hour* Fixing a few tiny bugs - Stop button wasn't working again 
 * *1 hour* Recorded a demo 
 
-### 9 Nov 
+### 9 Nov 2021
 * No progress
 
-### 10 Nov
+### 10 Nov 2021
 * *1 hour* Recorded demos to demonstrate progress 
 * *0.5 hour* Centering the video feed 
 * *0.5 hour* Attempting to implement the video feed being accessed by both a smartphone and a desktop
 
-### 11 Nov 
+### 11 Nov 2021
 * *1 hour* Spent time writting up all progress made for supervisor 
 * *1 hour* Started implementation with faceAPIs
 
-### 12 Nov 
-# No progress 
+### 12 Nov 2021
+* No progress 
 
-### 13 Nov 
+### 13 Nov 2021
 * *1 hour* Continued with faceAPI implementation using ml5.js
 * *1 hour* Continued with faceAPI implementation using MediaPipe
 
-### 14 Nov 
+### 14 Nov 2021
 * *1 hour* Finishing the implementation of the faceAPI using MediaPipe 
 
 
 ## Week 9 
 
-### 15 Nov 
+### 15 Nov 2021
 * No progress
 
-### 16 Nov 
+### 16 Nov 2021
 * *0.5 hour* Came across a recent issue, spent time looking into the issue 
 * *1 hour* Issue with uart connecton not working on the choosen hosting page, tested connection on GitHub pages 
 * *0.5 hour* Updating supervisor about the issue 
 * *0.5 hour* Testing other aspects of the project on GitHub pages to make sure the connection works
 
+### 17 Nov 2021
+* *2 hours* Transferring project on to GitHub pages as the main hosting platform since p5js editor does not support the UART connection anymore 
+* *0.5 hour* Researching the issues, there seemed to be an update on p5js which makes the UART connection not work - although still unaware which part of the update has caused this 
+
+### 18 Nov 2021
+* *2 hours* Continuing with faceAPI implementation 
+
+### 19 Nov 2021
+* *0.5 hour* Meeting with supervisor to discuss issues and progress 
+* *1 hour* Decided which facial feature would be used for tracking i.e. which feature is the easiest and most reliable to track 
+
+### 20 Nov 2021
+* *1 hour* Spent time looking into how to switch cameras i.e. switching between front and back-facing cameras 
+* *1 hour* Looking into the aspect of identifying the environment 
+* *1 hour* After research, decided to implement a switch button to change between cameras 
+
+### 21 Nov 2021
+* No progress - focussed on coursework for other classes 
+
+## Week 10 
+
+### 22 Nov 2021
+* *1 hour* Fixing an issues identified with using the camera whilst hosting on GitHub pages 
+* *1 hour* Continued with implementation of the switch button 
+
+### 23 Nov 2021 
+* *2 hours* Decided to implement a drop down menu to let the user choose the environment instead of a switch button to see if it works better in general 
+
+### 24 Nov 2021 
+* *1 hour* Continued with drop down environment menu implementation 
+* *1 hour* After continous failed attempts, reverted back to the switch button 
+* *1 hour* Recored a demo of the switch button working for supervisor
+
+### 25 Nov 2021 
+* *1 hour* Starting with the ml5js implementation of the faceAPI decided to use the nose as the main feature to be tracked 
+* *1 hour* Changing a few aspects of the implementation i.e. moving the video feed to the centre and adding text to describe what the implementation is doing when the face starts to move 
+* *1 hour* Implementiing nose tracking 
+
+### 26 Nov 2021 
+* *1 hour* Meeting with supervisor to dicuss progress, issues and review demos - also discussed the advantages and disadvantages of using the nose as the main tracking feature 
+* *1 hour* Continued with nose tracking implementation 
+
+### 27 Nov 2021 
+* *2 hours* Updating GitHub locally - changes not pushed onto the main branch on this day 
+
+### 28 Nov 2021 
+* No progress - focussed on coursework 
+
+## Week 11 
+
+### 29 Nov 2021 
+* *1 hour* Updating changes are pushed onto the current working branch (ml5-faceAPI not main) 
