@@ -16,11 +16,68 @@ function setup() {
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
   
-  video = createCapture(VIDEO);
+  /*default option is front facing camera*/
+  options = {
+    video: {
+      faceingMode: {
+        exact: "user"
+      }
+    }
+  };
+
+  video = createCapture(options);
   video.size(640, 480);
   video.hide();
   faceapi = ml5.faceApi(video, detectionOptions, modelReady);
-  textAlign(RIGHT);
+
+  switchButton = createButton('Switch Camera');
+  switchButton.position(19, 100);
+  switchButton.mousePressed(switchCamera);
+
+  //textAlign(RIGHT);
+}
+
+/* function to switch the camera depending if the switchFlag has been set to true or false*/
+function switchCamera() {
+  switchFlag = !switchFlag;
+  stopCapture(); //stops the current createCapture
+  if(switchFlag == true) {
+    video.remove(); //removes the video currently being captured
+    options = {
+      video: {
+        facingMode: {
+          exact: "environment"
+        }
+      }
+    };
+  } else {
+    video.remove();
+    options = {
+      video: {
+        facingMode: {
+          exact: "user"
+        }
+      }
+    };
+  }
+
+  video = createCapture(options); // create a new capture using the updated options 
+  video.size(640, 480); //resize the video to fit the display width and height 
+  video.hide(); //hide the video feed 
+  //pixelDensity(1);
+  noStroke();
+}
+
+/* function to stop the current capture*/
+function stopCapture() {
+  let stream = video.elt.srcObject;
+  let tracks = stream.getTracks();
+
+  tracks.forEach(function(track) {
+    track.stop();
+  });
+
+  video.elt.srcObject = null;
 }
 
 function modelReady() {
@@ -38,7 +95,7 @@ function gotResults(err, result) {
   detections = result;
   
   background(255);
-  image(video, 0, 0, 640, 480);
+  image(video, 0, 0);
   if (detections) {
     if (detections.length > 0) {
       drawBox(detections);
