@@ -15,8 +15,6 @@ const detectionOptions = {
 
 function setup() {
   var cnv = createCanvas(640, 480);
-
-  console.log(windowWidth);
   
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
@@ -34,6 +32,7 @@ function setup() {
   video = createCapture(options);
   video.size(640, 480);
   video.hide();
+  pixelDensity(1);
   noStroke();
   faceapi = ml5.faceApi(video, detectionOptions, modelReady);
 
@@ -102,7 +101,7 @@ function gotResults(err, result) {
   detections = result;
   
   background(255);
-  image(video, 0, 0);
+  image(video, 0, 0, 640, 480);
   if (detections && connection) {
     if (detections.length > 0) {
       drawBox(detections);
