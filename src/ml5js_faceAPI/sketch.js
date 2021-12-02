@@ -148,7 +148,6 @@ function follow(detections) {
         fill(255);
         text("Moving Robot Right", 220, 470);
       }
-      console.log(noseX);
     }
     
     
