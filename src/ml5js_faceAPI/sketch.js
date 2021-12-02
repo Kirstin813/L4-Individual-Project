@@ -129,7 +129,6 @@ function follow(detections) {
     
     for (let j = 0; j < nose.length; j += 1) {
       noseX = nose[j]._x;
-      //noseY = nose[j]._y;
       
       if ((noseX <= width/3) && (noseX>=0)) {
         move(left);
