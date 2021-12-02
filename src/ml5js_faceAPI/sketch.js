@@ -1,9 +1,12 @@
 let faceapi;
+let switchFlag = false;
+let switchButton;
 let video;
 let detections;
 let noseX = 0;
 let noseY = 0;
 let currentAction;
+let options;
 
 const detectionOptions = {
   withLandmarks: true,
@@ -31,6 +34,7 @@ function setup() {
   video = createCapture(options);
   video.size(640, 480);
   video.hide();
+  noStroke();
   faceapi = ml5.faceApi(video, detectionOptions, modelReady);
 
   switchButton = createButton('Switch Camera');
