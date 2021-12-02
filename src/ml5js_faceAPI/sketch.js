@@ -83,10 +83,10 @@ function stopCapture() {
 function modelReady() {
   console.log("ready!");
   console.log(faceapi);
-  faceapi.detect(draw);
+  faceapi.detect(gotResults);
 }
 
-function draw(err, result) {
+function gotResults(err, result) {
   if (err) {
     console.log(err);
     return;
