@@ -3,6 +3,7 @@ let video;
 let detections;
 let noseX = 0;
 let noseY = 0;
+let currentAction;
 
 const detectionOptions = {
   withLandmarks: true,
@@ -96,7 +97,7 @@ function gotResults(err, result) {
   
   background(255);
   image(video, 0, 0);
-  if (detections) {
+  if (detections && connection) {
     if (detections.length > 0) {
       drawBox(detections);
       follow(detections);
@@ -105,6 +106,14 @@ function gotResults(err, result) {
   }
   
   faceapi.detect(gotResults);
+}
+
+function move(action) {
+  if (action != currentAction) {
+    currentAction = action;
+    console.log(currentAction)
+    currentAction();
+  }
 }
 
 function follow(detections) {
@@ -118,18 +127,18 @@ function follow(detections) {
       //noseY = nose[j]._y;
       
       if ((noseX <= width/3) && (noseX>=0)) {
-        left();
+        move(left);
         textSize(20);
         fill(255);
         text("Moving Robot Left", 180, 470);
       } else if ((noseX > width/3) && (noseX <2*width/3)) {
         console.log("stp moving robot");
-        stop();
+        move(stop);
         textSize(20);
         fill(255);
         text("Face is in the centre", 220, 470);
       } else if ((noseX > 2*width/3) && (noseX <width)) {
-        right();
+        move(right);
         textSize(20);
         fill(255);
         text("Moving Robot Right", 220, 470);
@@ -265,3 +274,4 @@ function stop() {
     connection.write("stop();\n");
   }
 }
+
