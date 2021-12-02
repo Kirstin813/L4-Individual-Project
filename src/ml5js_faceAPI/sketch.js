@@ -58,20 +58,23 @@ function follow(detections) {
     
     for (let j = 0; j < nose.length; j += 1) {
       noseX = nose[j]._x;
-      noseY = nose[j]._y;
+      //noseY = nose[j]._y;
       
       if ((noseX <= width/3) && (noseX>=0)) {
+        left();
         textSize(20);
         fill(255);
         text("Moving Robot Left", 180, 470);
       } else if ((noseX > width/3) && (noseX <2*width/3)) {
+        stop();
         textSize(20);
         fill(255);
-        text("Moving Robot Forward", 220, 470);
+        text("Face is in the centre", 220, 470);
       } else if ((noseX > 2*width/3) && (noseX <width)) {
+        right();
         textSize(20);
         fill(255);
-        text("Moving Robot Right", 100, 470);
+        text("Moving Robot Right", 220, 470);
       }
       console.log(noseX);
     }
@@ -129,5 +132,78 @@ function drawPart(feature, closed) {
     endShape(CLOSE);
   } else {
     endShape();
+  }
+}
+
+
+let connection;
+
+function onLine(lineString) {
+  console.log(lineString.trim());
+}
+
+function connect() {
+  if (connection) {
+    disconnect()
+  }
+  UART.connect(function(c) {
+        if (!c) {
+          console.log("Couldn't connect!");
+          return;
+        }
+        connection = c;
+        // Handle the data we get back, and call 'onLine'
+        // whenever we get a line
+        var buf = "";
+        connection.on("data", function(d) {
+          buf += d;
+          var i = buf.indexOf("\n");
+          while (i>=0) {
+            onLine(buf.substr(0,i));
+            buf = buf.substr(i+1);
+            i = buf.indexOf("\n");
+          }
+        });
+  });
+}
+
+function disconnect() {
+  if (connection) {
+    connection.close();
+    connection = undefined;
+  }
+}
+
+// Writing the basic 4 functions used by the robot - Forward, Backward, Left and Right
+
+function forward() {
+  if (connection) {
+    connection.write('forward();\n');
+  }
+}
+
+function backward() {
+  if (connection) {
+    connection.write('backward();\n');
+      }
+}
+
+function left() {
+  if (connection) {
+    connection.write('left();\n');
+  }
+}
+
+function right() {
+  if (connection) {
+    connection.write('right();\n');
+  }
+}
+
+// function to stop performing the actions 
+
+function stop() {
+  if (connection) {
+    connection.write("stop();\n");
   }
 }
