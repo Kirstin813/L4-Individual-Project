@@ -13,6 +13,8 @@ const detectionOptions = {
 function setup() {
   var cnv = createCanvas(640, 480);
 
+  console.log(windowWidth);
+  
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
