@@ -95,7 +95,7 @@ function gotResults(err, result) {
   detections = result;
   
   background(255);
-  image(video, 0, 0, 640, 480);
+  image(video, 0, 0);
   if (detections) {
     if (detections.length > 0) {
       drawBox(detections);
