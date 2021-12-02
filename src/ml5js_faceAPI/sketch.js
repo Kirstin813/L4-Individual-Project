@@ -83,10 +83,10 @@ function stopCapture() {
 function modelReady() {
   console.log("ready!");
   console.log(faceapi);
-  faceapi.detect(gotResults);
+  faceapi.detect(draw);
 }
 
-function gotResults(err, result) {
+function draw(err, result) {
   if (err) {
     console.log(err);
     return;
@@ -95,7 +95,7 @@ function gotResults(err, result) {
   detections = result;
   
   background(255);
-  image(video, 0, 0);
+  image(video, 0, 0, 6);
   if (detections) {
     if (detections.length > 0) {
       drawBox(detections);
@@ -123,6 +123,7 @@ function follow(detections) {
         fill(255);
         text("Moving Robot Left", 180, 470);
       } else if ((noseX > width/3) && (noseX <2*width/3)) {
+        console.log("stp moving robot");
         stop();
         textSize(20);
         fill(255);
