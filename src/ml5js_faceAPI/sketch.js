@@ -136,7 +136,6 @@ function follow(detections) {
         fill(255);
         text("Moving Robot Left", 180, 470);
       } else if ((noseX > width/3) && (noseX <2*width/3)) {
-        console.log("stp moving robot");
         move(stop);
         textSize(20);
         fill(255);
