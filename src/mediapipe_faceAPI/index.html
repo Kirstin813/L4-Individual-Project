@@ -10,8 +10,14 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8">
 
+  <script src="https://www.espruino.com/js/uart.js"></script>
+
 </head>
 <body>
+  <div>
+    <button onclick="connect();" class="connection">Connect</button>
+    <button onclick="disconnect();" class="connection">Disconnect</button>
+  </div>
   <div class="container">
     <video class="input_video" width="640" height="480"></video>
     <canvas class="output_canvas" width="640" height="480"></canvas>

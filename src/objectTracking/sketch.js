@@ -4,6 +4,7 @@ let switchButton;
 let colourMatch;
 let tolerance = 15; //allows a tolerance buffer as the colour match will not be exact so as long as the colour falls into the range then its a good colour match 
 let options;
+let currentAction;
 
 function setup() {
   var canvas = createCanvas(640, 480); 
@@ -82,6 +83,13 @@ function stopCapture() {
   video.elt.srcObject = null;
 }
 
+function move(action) {
+  if (action != currentAction) {
+    currentAction = action;
+    currentAction();
+  }
+}
+
 function draw() {
   image(video, 0, 0); //draw the video feed onto the canvas 
   
@@ -96,25 +104,25 @@ function draw() {
     strokeWeight(2);
     circle(colourPixel.x, colourPixel.y, 30);  
     
-    move(colourPixel);
+    followColour(colourPixel);
   
   }
 
 }
 
-function move(colourPixel) {
+function followColour(colourPixel) {
       if ( (colourPixel.x<=width/3) && (colourPixel.x>=0) ) {
-        left();
+        move(left)
         textSize(20);
         fill(255);
         text("Moving Robot Left", 10, 470);
       } else if ( (colourPixel.x > width/3) && (colourPixel.x < 2*width/3) ) {
-        forward();
+        move(forward)
         textSize(20);
         fill(255);
         text("Moving Robot Forward", 10, 470);
       } else if ( (colourPixel.x > 2*width/3) && (colourPixel.x < width)) {
-        right();
+        move(right)
         textSize(20);
         fill(255);
         text("Moving Robot Right", 10, 470);

@@ -106,7 +106,6 @@ function gotResults(err, result) {
     if (detections.length > 0) {
       drawBox(detections);
       follow(detections);
-      //drawLandmarks(detections);
     }
   }
   
@@ -116,14 +115,13 @@ function gotResults(err, result) {
 function move(action) {
   if (action != currentAction) {
     currentAction = action;
-    console.log(currentAction)
     currentAction();
   }
 }
 
 function follow(detections) {
   for (let i = 0; i < detections.length; i += 1) {
-    const nose = detections[i].parts.nose;//._x;
+    const nose = detections[i].parts.nose;
     
     drawPart(nose, false);
     
