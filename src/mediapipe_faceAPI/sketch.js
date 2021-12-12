@@ -3,10 +3,58 @@ const canvasElement = document.getElementsByClassName('output_canvas')[0];
 const canvasCtx = canvasElement.getContext('2d');
 let currentAction;
 
+const btnfront = document.querySelector('#btn-front');
+const btnback = document.querySelector('#btn-back');
+
+const supports = navigator.mediaDevices.getSupportedConstraints();
+if(!supports['facingMode']) {
+  alert('Browser is not supported');
+}
+
+let stream;
+
+const capture = async facingMode => {
+  const options = {
+    audio: false,
+    video: {
+      facingMode,
+    },
+  };
+
+  try {
+    if (stream) {
+      const tracks = stream.getTracks();
+      tracks.forEach(track => track.stop());
+    }
+    stream = await navigator.mediaDevices.getUserMedia(options);
+  } catch (e) {
+    alert(e);
+    return;
+  }
+
+  videoElement.srcObject =  null;
+  videoElement.srcObject = stream;
+  videoElement.play();
+}
+
+
+btnfront.addEventListener('click', () => {
+  capture('user');
+});
+
+btnback.addEventListener('click', () => {
+  capture('environment');
+});
+
+if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices){
+  console.log("enumerateDevices is not supported.");
+}
+
+
 function onResults(results) {
   // Draw the overlays.
   canvasCtx.save();
-  console.log(results);
+  //console.log(results);
   canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
 
   canvasCtx.drawImage(
@@ -28,6 +76,7 @@ function onResults(results) {
  
 }
 
+videoElement.getElementsByClassName.display = "none";
 function move(action) {
   if (action != currentAction) {
     currentAction = action;

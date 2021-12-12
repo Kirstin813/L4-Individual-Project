@@ -18,8 +18,12 @@
     <button onclick="connect();" class="connection">Connect</button>
     <button onclick="disconnect();" class="connection">Disconnect</button>
   </div>
+  <div>
+    <button id="btn-front">Front Camera</button>
+    <button id="btn-back">Back Camera</button>
+  </div>
   <div class="container">
-    <video class="input_video" width="640" height="480"></video>
+    <video id="video" class="input_video" width="640" height="480"></video>
     <canvas class="output_canvas" width="640" height="480"></canvas>
     <script src="sketch.js"></script>
   </div>
