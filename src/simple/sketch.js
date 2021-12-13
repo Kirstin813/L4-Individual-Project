@@ -1,5 +1,7 @@
-// Set up the connection using https://editor.p5js.org/jgrizou/sketches/osAAXLUtL
-// which uses UART.js to communicate with the robot
+/**
+ * Using the connection setup in https://editor.p5js.org/jgrizou/sketches/osAAXLUtL 
+ * which uses UART.js to communicate with the robot
+ */
 
 var connection;
 
@@ -39,7 +41,14 @@ function disconnect() {
   }
 }
 
-// Writing the basic 4 functions used by the robot - Forward, Backward, Left and Right
+/**
+ * Following functions implement the actions the robot can take 
+ *  Forward
+ *  Backward
+ *  Left
+ *  Right 
+ *  Stop
+ */
 
 function forward() {
   if (connection) {
@@ -64,8 +73,6 @@ function right() {
     connection.write('right();\n');
   }
 }
-
-// function to stop performing the actions 
 
 function stop() {
   if (connection) {

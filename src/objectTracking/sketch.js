@@ -1,21 +1,26 @@
 let video;
+let colourMatch;
+let currentAction;
+
+// Allows a tolerance buffer as the colour match will not be exact 
+// as long as the colour falls into the range then its a good colour match 
+let tolerance = 15;
+
+// Variables used for switching camera 
 let switchFlag = false;
 let switchButton;
-let colourMatch;
-let tolerance = 15; //allows a tolerance buffer as the colour match will not be exact so as long as the colour falls into the range then its a good colour match 
 let options;
-let currentAction;
 
 function setup() {
   var canvas = createCanvas(640, 480); 
 
-  /*Center the video*/
+  /* Center the video */
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   canvas.position(x, y);
 
 
-  /*default option is front facing camera*/
+  /* Default option is front facing camera */
   options = {
     video: {
       faceingMode: {
@@ -24,28 +29,28 @@ function setup() {
     }
   };
 
-  video = createCapture(options); //creates a HTML5 video using the webcam or the camera on a smartphone 
-  video.size(640, 480); //resize the video to fit the display width and height 
-  video.hide(); //hide the video feed 
+  video = createCapture(options); // Creates a HTML5 video using the webcam or the camera on a smartphone 
+  video.size(640, 480); // Resize the video to fit the display width and height 
+  video.hide(); // Hide the video feed 
   pixelDensity(1);
   noStroke();
 
 
-  /* Adding a "switch camera" button to be able to switch the camera using createCapture*/
+  /* Adding a "switch camera" button to be able to switch the camera using createCapture */
   switchButton = createButton('Switch Camera');
   switchButton.position(19, 100);
   switchButton.mousePressed(switchCamera);
   
-  colourMatch = color(255, 150, 0);  //initial colour to match 
+  colourMatch = color(255, 150, 0);  // Initial colour to match 
 }
 
 
-/* function to switch the camera depending if the switchFlag has been set to true or false*/
+/* Function to switch the camera depending if the switchFlag has been set to true or false */
 function switchCamera() {
   switchFlag = !switchFlag;
-  stopCapture(); //stops the current createCapture
+  stopCapture(); // Stops the current createCapture
   if(switchFlag == true) {
-    video.remove(); //removes the video currently being captured
+    video.remove(); // Removes the video currently being captured
     options = {
       video: {
         facingMode: {
@@ -64,14 +69,14 @@ function switchCamera() {
     };
   }
 
-  video = createCapture(options); // create a new capture using the updated options 
-  video.size(640, 480); //resize the video to fit the display width and height 
-  video.hide(); //hide the video feed 
-  //pixelDensity(1);
+  video = createCapture(options); // Create a new capture using the updated options 
+  video.size(640, 480); // Resize the video to fit the display width and height 
+  video.hide(); // Hide the video feed 
+  pixelDensity(1);
   noStroke();
 }
 
-/* function to stop the current capture*/
+/* Function to stop the current capture */
 function stopCapture() {
   let stream = video.elt.srcObject;
   let tracks = stream.getTracks();
@@ -83,6 +88,7 @@ function stopCapture() {
   video.elt.srcObject = null;
 }
 
+/* Function to move/update the moving action of the robot */
 function move(action) {
   if (action != currentAction) {
     currentAction = action;
@@ -91,13 +97,13 @@ function move(action) {
 }
 
 function draw() {
-  image(video, 0, 0); //draw the video feed onto the canvas 
+  image(video, 0, 0); // Draw the video feed onto the canvas 
   
-  let colourPixel = findColour(video, colourMatch, tolerance); // finds the first pixel of the colour that we want to match 
+  let colourPixel = findColour(video, colourMatch, tolerance);
   
   if(colourPixel != undefined) {
     
-    // Draws a little circle around the colour to show that it has been matched 
+    // Draws a small circle around the colour to show that it has been matched 
     // and that the colour is being tracked
     fill(colourMatch);
     stroke(255);
@@ -110,17 +116,21 @@ function draw() {
 
 }
 
+/* Follows the given colour on the canvas */
 function followColour(colourPixel) {
+      // If the colour is in the left third of the canvas then robot moves left 
       if ( (colourPixel.x<=width/3) && (colourPixel.x>=0) ) {
         move(left)
         textSize(20);
         fill(255);
         text("Moving Robot Left", 10, 470);
+      // If the colour is in the middle of the canvas then robot moves forward 
       } else if ( (colourPixel.x > width/3) && (colourPixel.x < 2*width/3) ) {
         move(forward)
         textSize(20);
         fill(255);
         text("Moving Robot Forward", 10, 470);
+      // If the colour is in the right third of the canvas then robot moves right 
       } else if ( (colourPixel.x > 2*width/3) && (colourPixel.x < width)) {
         move(right)
         textSize(20);
@@ -130,7 +140,7 @@ function followColour(colourPixel) {
   
 }
 
-// this function allows you to click on any colour on the screen to be set as the colour to be matched.
+// Function which allows you to click on any colour on the screen to be set as the colour to be matched.
 function mousePressed() {
     loadPixels();
     if (mouseY < height && mouseY > 0) {
@@ -139,6 +149,7 @@ function mousePressed() {
     
 }
 
+/* Finds the first pixel of the colour that we want to match */
 function findColour(vidInput, colour, tolerance) {
   
   // RGB pixels of the colour to be matched 
@@ -146,9 +157,9 @@ function findColour(vidInput, colour, tolerance) {
   let colourG = colour[1];
   let colourB = colour[2];
   
-  vidInput.loadPixels(); // loads all of the pixels from the video 
-  for (let y=0; y <vidInput.height; y++){ // iterating through the y-axis 
-    for (let x=0; x<vidInput.width; x++) { //iterating through the x-axis 
+  vidInput.loadPixels(); // Loads all of the pixels from the video 
+  for (let y=0; y <vidInput.height; y++){ // Iterating through the y-axis 
+    for (let x=0; x<vidInput.width; x++) { // Iterating through the x-axis 
       
       let index = (y * video.width + x) * 4; 
       
@@ -205,7 +216,14 @@ function disconnect() {
   }
 }
 
-// Writing the basic 4 functions used by the robot - Forward, Backward, Left and Right
+/**
+ * Following functions implement the actions the robot can take 
+ *  Forward
+ *  Backward
+ *  Left
+ *  Right 
+ *  Stop
+ */
 
 function forward() {
   if (connection) {
@@ -230,8 +248,6 @@ function right() {
     connection.write('right();\n');
   }
 }
-
-// function to stop performing the actions 
 
 function stop() {
   if (connection) {

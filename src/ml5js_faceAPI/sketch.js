@@ -1,11 +1,6 @@
 let faceapi;
-let switchFlag = false;
-let switchButton;
 let video;
 let detections;
-let noseX = 0;
-let noseY = 0;
-let currentAction;
 let options;
 
 const detectionOptions = {
@@ -16,11 +11,12 @@ const detectionOptions = {
 function setup() {
   var cnv = createCanvas(640, 480);
   
+  /* Center the video */
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
   
-  /*default option is front facing camera*/
+  /* Default option is front facing camera */
   options = {
     video: {
       faceingMode: {
@@ -29,26 +25,29 @@ function setup() {
     }
   };
 
-  video = createCapture(options);
-  video.size(640, 480);
-  video.hide();
+  video = createCapture(options); // Creates a HTML5 video using the webcam or the camera on a smartphone
+  video.size(640, 480); // Resize the video to fit the display width and height 
+  video.hide(); // Hide the video feed 
   pixelDensity(1);
   noStroke();
+
   faceapi = ml5.faceApi(video, detectionOptions, modelReady);
 
+  /* Adding a "switch camera" button to be able to switch the camera using createCapture */
   switchButton = createButton('Switch Camera');
   switchButton.position(19, 100);
   switchButton.mousePressed(switchCamera);
-
-  //textAlign(RIGHT);
 }
 
-/* function to switch the camera depending if the switchFlag has been set to true or false*/
+let switchFlag = false;
+let switchButton;
+
+/* Function to switch the camera depending if the switchFlag has been set to true or false*/
 function switchCamera() {
   switchFlag = !switchFlag;
-  stopCapture(); //stops the current createCapture
+  stopCapture(); // Stops the current createCapture
   if(switchFlag == true) {
-    video.remove(); //removes the video currently being captured
+    video.remove(); // Removes the video currently being captured
     options = {
       video: {
         facingMode: {
@@ -70,11 +69,13 @@ function switchCamera() {
   video = createCapture(options); // create a new capture using the updated options 
   video.size(640, 480); //resize the video to fit the display width and height 
   video.hide(); //hide the video feed 
-  //pixelDensity(1);
+  pixelDensity(1);
   noStroke();
+
+  faceapi = ml5.faceApi(video, detectionOptions, modelReady); // test to see if this works
 }
 
-/* function to stop the current capture*/
+/* Function to stop the current capture*/
 function stopCapture() {
   let stream = video.elt.srcObject;
   let tracks = stream.getTracks();
@@ -86,12 +87,14 @@ function stopCapture() {
   video.elt.srcObject = null;
 }
 
+/* Check if the models have been loaded and are ready to use */
 function modelReady() {
   console.log("ready!");
   console.log(faceapi);
   faceapi.detect(gotResults);
 }
 
+/* Using the results, detect the face and draw landmarks */
 function gotResults(err, result) {
   if (err) {
     console.log(err);
@@ -102,6 +105,7 @@ function gotResults(err, result) {
   
   background(255);
   image(video, 0, 0, 640, 480);
+
   if (detections && connection) {
     if (detections.length > 0) {
       drawBox(detections);
@@ -112,6 +116,9 @@ function gotResults(err, result) {
   faceapi.detect(gotResults);
 }
 
+let currentAction;
+
+/* Function to move/update the moving action of the robot */
 function move(action) {
   if (action != currentAction) {
     currentAction = action;
@@ -119,25 +126,32 @@ function move(action) {
   }
 }
 
+let noseX = 0;
+let noseY = 0;
+
+/* Follow the face, depending which area of the canvas it is in it will move either left or right */
 function follow(detections) {
   for (let i = 0; i < detections.length; i += 1) {
     const nose = detections[i].parts.nose;
     
-    drawPart(nose, false);
+    drawPart(nose, false); // Draws the nose on the canvas
     
     for (let j = 0; j < nose.length; j += 1) {
-      noseX = nose[j]._x;
+      noseX = nose[j]._x; // x coordinate of the nose 
       
+      // If the nose is within the left third of the canvas then it turns left 
       if ((noseX <= width/3) && (noseX>=0)) {
         move(left);
         textSize(20);
         fill(255);
         text("Moving Robot Left", 180, 470);
+      // If the nose is within the middle of the canvas then the robot stops moving 
       } else if ((noseX > width/3) && (noseX <2*width/3)) {
         move(stop);
         textSize(20);
         fill(255);
         text("Face is in the centre", 220, 470);
+      // If the nose is within the right third of the canvas then it turns right
       } else if ((noseX > 2*width/3) && (noseX <width)) {
         move(right);
         textSize(20);
@@ -150,6 +164,7 @@ function follow(detections) {
   }
 }
 
+/* Draws a bouding box around the indentified face */
 function drawBox(detections) {
   for (let i = 0; i <detections.length; i += 1) {
     const alignedRect = detections[i].alignedRect;
@@ -165,28 +180,7 @@ function drawBox(detections) {
   }
 }
 
-function drawLandmarks(detections) {
-  noFill();
-  stroke(161, 95, 251);
-  strokeWeight(2);
-  
-  for (let i = 0; i < detections.length; i+=1) {
-    const mouth = detections[i].parts.mouth;
-    const nose = detections[i].parts.nose;
-    const leftEye = detections[i].parts.leftEye;
-    const rightEye = detections[i].parts.rightEye;
-    const leftEyeBrow = detections[i].parts.leftEyeBrow;
-    const rightEyeBrow = detections[i].parts.rightEyeBrow;
-    
-    drawPart(mouth, true);
-    drawPart(nose, false);
-    drawPart(leftEye, true);
-    drawPart(leftEyeBrow, false);
-    drawPart(rightEye, true);
-    drawPart(rightEyeBrow, false);
-  }
-}
-
+/* Draws the shape of the landmark on the face i.e. the nose */
 function drawPart(feature, closed) {
   beginShape();
   for (let i = 0; i < feature.length; i += 1) {
@@ -241,7 +235,14 @@ function disconnect() {
   }
 }
 
-// Writing the basic 4 functions used by the robot - Forward, Backward, Left and Right
+/**
+ * Following functions implement the actions the robot can take 
+ *  Forward
+ *  Backward
+ *  Left
+ *  Right
+ *  Stop
+ */
 
 function forward() {
   if (connection) {
@@ -266,8 +267,6 @@ function right() {
     connection.write('right();\n');
   }
 }
-
-// function to stop performing the actions 
 
 function stop() {
   if (connection) {

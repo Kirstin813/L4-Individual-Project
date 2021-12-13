@@ -1,11 +1,16 @@
 const videoElement = document.getElementsByClassName('input_video')[0];
 const canvasElement = document.getElementsByClassName('output_canvas')[0];
 const canvasCtx = canvasElement.getContext('2d');
-let currentAction;
 
+/* Query Selector for the front and back camera options */
 const btnfront = document.querySelector('#btn-front');
 const btnback = document.querySelector('#btn-back');
 
+let currentAction;
+
+/** This section allows the camera to be switched.
+ * Current Status: NOT WORKING
+ */
 const supports = navigator.mediaDevices.getSupportedConstraints();
 if(!supports['facingMode']) {
   alert('Browser is not supported');
@@ -34,10 +39,16 @@ const capture = async facingMode => {
 
   videoElement.srcObject =  null;
   videoElement.srcObject = stream;
-  videoElement.play();
+  //videoElement.play();
+
+  return new Promise((resolve) => {
+    videoElement.onloadedmetadata = () => {
+      resolve(videoElement);
+    };
+  });
 }
 
-
+/* Event listeners for the back and front camera buttons */
 btnfront.addEventListener('click', () => {
   capture('user');
 });
@@ -46,15 +57,10 @@ btnback.addEventListener('click', () => {
   capture('environment');
 });
 
-if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices){
-  console.log("enumerateDevices is not supported.");
-}
-
-
+/* Uses the results from the API to identify and track the face */
 function onResults(results) {
-  // Draw the overlays.
+  // Draw the overlays i.e. bouding box and landmarks
   canvasCtx.save();
-  //console.log(results);
   canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
 
   canvasCtx.drawImage(
@@ -76,7 +82,7 @@ function onResults(results) {
  
 }
 
-videoElement.getElementsByClassName.display = "none";
+/* Function to move/update the moving action of the robot */
 function move(action) {
   if (action != currentAction) {
     currentAction = action;
@@ -84,10 +90,15 @@ function move(action) {
   }
 }
 
+/**
+ * Follows the position of the nose 
+ * 
+ * If it is within the left third of the canvas the robot moves left 
+ * If it is within the middle of the canvas the robot stops moving 
+ * If it is within the right third of the canvas the robot moves right 
+ */
 function follow(detections) {
   X = detections[0].landmarks[2].x * canvasElement.width; // this is the nose 
-
-  console.log(X);
 
   if ((X <= canvasElement.width/3) && (X>=0)) {
     move(left);
@@ -98,18 +109,17 @@ function follow(detections) {
   }
 }
 
-
 const faceDetection = new FaceDetection({locateFile: (file) => {
   return `https://cdn.jsdelivr.net/npm/@mediapipe/face_detection@0.3/${file}`;
 }});
 
+/* Sets the parameters for the face dectection i.e. how accurate/confident or the max distance from the camera */
 faceDetection.setOptions({
   modelSelection: 0,
   minDetectionConfidence: 0.5
 });
 
 faceDetection.onResults(onResults);
-
 
 const camera = new Camera(videoElement, {
   onFrame: async () => {
@@ -159,7 +169,14 @@ function disconnect() {
   }
 }
 
-// Writing the basic 4 functions used by the robot - Forward, Backward, Left and Right
+/**
+ * Following functions implement the actions the robot can take 
+ *  Forward
+ *  Backward
+ *  Left
+ *  Right
+ *  Stop
+ */
 
 function forward() {
   if (connection) {
@@ -184,8 +201,6 @@ function right() {
     connection.write('right();\n');
   }
 }
-
-// function to stop performing the actions 
 
 function stop() {
   if (connection) {
