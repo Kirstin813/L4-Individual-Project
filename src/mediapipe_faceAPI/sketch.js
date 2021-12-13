@@ -11,41 +11,45 @@ let currentAction;
 /** This section allows the camera to be switched.
  * Current Status: NOT WORKING
  */
-const supports = navigator.mediaDevices.getSupportedConstraints();
-if(!supports['facingMode']) {
-  alert('Browser is not supported');
-}
 
-let stream;
+function setupCamera() {
 
-const capture = async facingMode => {
-  const options = {
-    audio: false,
-    video: {
-      facingMode,
-    },
-  };
+  const supports = navigator.mediaDevices.getSupportedConstraints();
+  if(!supports['facingMode']) {
+    alert('Browser is not supported');
+  } 
 
-  try {
-    if (stream) {
-      const tracks = stream.getTracks();
-      tracks.forEach(track => track.stop());
-    }
-    stream = await navigator.mediaDevices.getUserMedia(options);
-  } catch (e) {
-    alert(e);
-    return;
-  }
+  let stream;
 
-  videoElement.srcObject =  null;
-  videoElement.srcObject = stream;
-  //videoElement.play();
-
-  return new Promise((resolve) => {
-    videoElement.onloadedmetadata = () => {
-      resolve(videoElement);
+  const capture = async facingMode => {
+    const options = {
+      audio: false,
+      video: {
+        facingMode,
+      },
     };
-  });
+
+    try {
+      if (stream) {
+        const tracks = stream.getTracks();
+        tracks.forEach(track => track.stop());
+      }
+      stream = await navigator.mediaDevices.getUserMedia(options);
+    } catch (e) {
+      alert(e);
+      return;
+    }
+
+    videoElement.srcObject =  null;
+    videoElement.srcObject = stream;
+    //videoElement.play();
+
+    return new Promise((resolve) => {
+      videoElement.onloadedmetadata = () => {
+        resolve(videoElement);
+      };
+    });
+  }
 }
 
 /* Event listeners for the back and front camera buttons */
@@ -60,6 +64,7 @@ btnback.addEventListener('click', () => {
 /* Uses the results from the API to identify and track the face */
 function onResults(results) {
   // Draw the overlays i.e. bouding box and landmarks
+  
   canvasCtx.save();
   canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
 
@@ -123,6 +128,7 @@ faceDetection.onResults(onResults);
 
 const camera = new Camera(videoElement, {
   onFrame: async () => {
+    await setupCamera();
     await faceDetection.send({image: videoElement});
   },
   width: 640,
