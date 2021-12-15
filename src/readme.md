@@ -2,10 +2,10 @@
 
 Each folder represents each stage of the project with the exception of 'simple' and 'ml5js_faceAPI'. 
 
-Stage 1 is represented by 'objectTracking'
-Stage 2 is represented by 'followFace'
-Stage 3 is represented by ...
-Stage 4 is represented by ...
+- Stage 1 is represented by 'objectTracking'
+- Stage 2 is represented by 'followFace'
+- Stage 3 is represented by ...
+- Stage 4 is represented by ...
 
 ### Object Tracking 
 
@@ -62,7 +62,7 @@ Below is a demo of this stage working:
 ### Fully Self Driving 
 
 *Description of code*
-
+ 
 ## Build instructions
 
 **You must** include the instructions necessary to build and deploy this project successfully. If appropriate, also include 
