@@ -8,7 +8,7 @@ This is my L4 project for the 2021-22 academic year.
 
 This project is inspired by the [Amazon Deep Racer](https://aws.amazon.com/deepracer/). This product allows consumers to purchase the Deep Racer and learn about machine learning using the software, algorithms, and tutorials. It also allows consumers to participate in a racing league to demonstrate knowledge and progress through a virtual circuit.
 
-However, the Deep Racer is extremely expensive for the average consumer, costing between $300-$400+ and would most likely involve downloading or setting up specialised software that is required for the Deep Racer. On top of this, consumers would need to pay for monthly plans if they wanted to use Amazon Virtual Private Server (VPS). 
+However, the Deep Racer is extremely expensive for the average consumer, costing between $300-$400+ and would most likely involve downloading or setting up specialized software that is required for the Deep Racer. On top of this, consumers would need to pay for monthly plans if they wanted to use Amazon Virtual Private Server (VPS). 
 
 ### Project Aim
 
