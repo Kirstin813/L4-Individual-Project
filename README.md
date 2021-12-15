@@ -18,7 +18,7 @@ The ultimate aim of this project is to implement a fully self-driving robot car 
 
 Using the given robot car, pictured below, the smartphone will be placed on the mount on top of the car which will then be connected to the car using web Bluetooth through the [UART.js library](http://www.espruino.com/UART.js?print). The code that has already been implemented onto the robot can perform the following actions; forward, backward, left, right, and stop. 
 
-<img src="media/robotCar.gif" width="600" />
+<img src="media/robotCar.png" width="600" />
 
 Using the robot's actions, the project will be divided into four stages, which increase in difficulty as each stage progresses. 
 
