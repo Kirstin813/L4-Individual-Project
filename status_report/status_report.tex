@@ -1,0 +1,131 @@
+    
+\documentclass[11pt]{article}
+\usepackage{times}
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+    \usepackage{fullpage}
+    
+    \title{Self Driving Car Using the Browser on a Smartphone}
+    \author{Kirstin Ritchie 2389589r}
+
+    \begin{document}
+    \maketitle
+    
+    
+     
+
+\section{Status report}
+
+\subsection{Proposal}\label{proposal}
+
+\subsubsection{Motivation}\label{motivation}
+
+Using a smartphone camera that is being accessed through the browser on a webpage 
+allows for large accessibility to all consumers wanting to make or develop a 
+self-driving robot car. In comparison to a similar product, the Amazon Deep Racer 
+(https://aws.amazon.com/deepracer/) allows customers to learn various machine 
+learning techniques but at the expensive cost of purchasing the robot itself 
+and other additives such as software, frameworks, and tailored tutorials. The 
+self-driving car robot that I plan to implement will demonstrate if it is 
+possible to make a fully self-driving car robot using current technology.
+
+\subsubsection{Aims}\label{aims}
+
+This project will work towards developing a fully self-driving robot car 
+that makes use of current technology. This project is broken up into stages 
+which increases in difficulty.
+
+\begin{enumerate}
+\item Follow an object 
+\item Follow a face 
+\item Follow a black line 
+\item Fully self-driving 
+\end{enumerate}
+
+Each stage will be implemented using Javascript along with various other frameworks 
+and APIs to aid development. The ultimate goal of this project is to check if it is 
+possible to create a fully self-driving car using a personal smartphone that 
+is supported by current technology. 
+
+\subsection{Progress}\label{progress}
+
+\begin{itemize}
+\item Main language chosen for this project: Javascript, HTML, CSS. 
+\item Research conducted for the first three stages (follow an object, 
+face, and black line).
+\item Implementation of basic control panel to move the robot.
+\item Implementation of object following using the p5.js library.
+\item Implementation of face tracking using ml5js and MediaPipe face-API.
+\item Implementation of the feature to switch camera environments in 
+object tracking. 
+\item Recorded demos which demonstrate the first two stages working. 
+\item Created a solid plan for the third stage (follow a black line).
+\end{itemize}
+
+
+\subsection{Problems and risks}\label{problems-and-risks}
+
+\subsubsection{Problems}\label{problems}
+
+Some of the issues that were encountered during the project so far:
+
+\begin{itemize}
+\item Compatability with iOS is limited. Using WebBLE as an initial 
+solution proved to be difficult when beginning implementation of stages 
+where camera access is required. WebBLE does not provide the capability to 
+access the camera on an iOS device. 
+\item Initial hosting platform (p5js editor) was suddenly unable to support 
+the web Bluetooth connection using UART.js.
+\item Implementation of following face stage using ml5js produces a slow video 
+feed which causes issues with following the face: very laggy, slow updates to 
+the robot.
+\item Switching the camera in the following face stage using MediaPipe does 
+not currently work: plan to possibly resolve the issue before the beginning of 
+semester 2. 
+\end{itemize}
+
+
+\subsubsection{Risks}\label{risks}
+
+\begin{itemize}
+\item Still to create a plan for the third stage using machine learning techniques:
+plan to consider some options before the beginning of the second semester 
+\item Unsure of how to evaluate the success of this project: Should success be 
+demonstrated through recorded demos? Should there be more comprehensive testing to 
+measure the success?: planning to research ways to measure success to provide a 
+good evaluation for this project.
+\end{itemize}
+
+\subsection{Plan}\label{plan}
+
+\subsubsection{Semester 2}
+
+NOTE: Writing for the dissertation will be continuous throughout semester 2.
+
+\begin{itemize}
+    \item 
+        Week 1-2: Update supervisor on progress made during the winter break. Continue with the 
+        development of the third stage and start considering some machine learning techniques 
+        that could be used in the third stage. \textbf{Deliverable:} Finalise implementation of 
+        the third stage along with demos to display progress.
+    \item 
+        Week 3-4: Finalize the code for the third stage and begin research on the fourth stage. 
+        Devise a detailed plan for the fourth stage. \textbf{Deliverable:} PDF of all conducted research 
+        and an outline of the detailed plan for the fourth stage. 
+    \item 
+        Week 5-7: Continue and finish the implementation of the fourth stage (if possible) and start 
+        possibly conduct some evaluations to test the success of the project. \textbf{Deliverable:} 
+        Finished implementation of the fourth stage (again if possible) and an outline of some 
+        evaluation tests I would consider conducting. 
+    \item 
+        Week 8-9: Begin writing up parts of the dissertation but also continue with any needed implementation 
+        or testing. \textbf{Deliverable:} Recorded demos of all stages working along with any required testing 
+        to measure the performance of each stage. Any written parts of the dissertation is sent to the supervisor 
+        for feedback.
+    \item 
+        Week 10: 'Tidy up' of all code and update the GitHub repository by adding all visualization and 
+        produce a first draft of the dissertation. \textbf{Deliverable:} First draft submitted 
+        to supervisor for feedback or approval two weeks (or more) before the deadline. 
+\end{itemize}
+
+\end{document}
