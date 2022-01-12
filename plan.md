@@ -67,7 +67,16 @@ Updated at the start of each week. Will outline plan for the week and what is ex
     * Record a demo for supervisor to review 
     * Devise a detailed plan for the project week
 * **Week 12 [PROJECT WEEK]**
+    * Update supervisor on status of project during weekly meeting 
+    * Make a switch to a different face API to better handle mobile camera better 
+    * Add all features from the previous implementation 
+    * Conducted general tests to ensure it all works correctly 
 * **Week 13 [PROJECT WEEK]** Status report submitted.
+    * Code tidy up 
+    * Update readme.md files for more information and background on the project 
+    * Record demos 
+    * Continue working on the switching camera issue
+    * Update supervisor and write up status report 
 
 ## Winter break
 

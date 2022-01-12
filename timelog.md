@@ -248,3 +248,101 @@
 
 ### 29 Nov 2021 
 * *1 hour* Updating changes are pushed onto the current working branch (ml5-faceAPI not main) 
+* *2 hours* Implementing nosw tracking using ml5-faceAPI
+* *1 hour* Conducting general testing 
+
+### 30 Nov 2021
+* *2 hours* Recording and editing demos 
+* *1 hour* Continuing implementation from the previous day 
+
+### 1 Dec 2021
+* *2 hours* Researching/Investigating the delay in the movement of the robot (raised issue)
+* *1 hour* Implementing a solution for the issue mentioned above 
+* *2 hours* Rerecording and editing demos 
+
+### 2 Dec 2021
+* *1 hour* Updating previous implementations with the new way to update te robots action 
+* *1 hour* Researching/Investigating issues with the camera delay (slow feed) whilst using ml5-faceAPI
+
+### 3 Dec 2021
+* *1 hour* Record camera delay issue to present to the supervisor 
+* *0.5 hour* Meeting with the supervisor 
+
+### 4 Dec 2021
+* *2 hours* Spent time researching the issue. Solution: Problem with the API not being completely compatible on a smartphone 
+
+### 5 Dec 2021
+* No progess - focus on other assignments 
+
+## Week 12 [Project Week]
+
+### 6 Dec 2021
+* *2 hours* Fixing issue with the API - changing API to MediaPipe 
+* *2 hours* Spent time adjusting MediaPipes API to suit the project 
+* *2 hours* Adding previous features from other implementations to the current implementation 
+
+### 7 Dec 2021
+* *2 hours* Continuing with MediaPipe API implementation 
+* No further progress - deadline for assignments 
+
+### 8 Dec 2021
+* *1 hour* Conducted general testing to make sure the new implementation works 
+* *0.5 hour* Issue with the implementation display two camera feeds instead of just one
+* *2 hours* Researching how to fix the above issue 
+* 2 hours* Implementing different solutions to resolve the issue  
+
+### 9 Dec 2021
+* *0.5 hour* Conducting general tests again 
+* *2 hours* Adding more features from previous implementations to the MediaPipe inplementation 
+* *1 hour* Conducting more general tests 
+* *2 hours* Attempting to implement the switch camera feature feature 
+* *2 hours* Recording and editing more demos 
+
+### 10 Dec 2021
+* *1 hour* meeting with the supervisor
+* *2 hours* Continuation with the switch camera implementation 
+* *2 hours* Adjusting the visual outlook of the webpage 
+
+### 11 Dec 2021 
+* *3 hours* Researching possible solutions for the issue regarding the switch camera feature 
+* *2 hours* Implementing solutions with no success 
+
+### 12 Dec 2021 
+* *2 hours* Continuing with the switch camera implementation with no further success 
+* *1 hour* Recording more demos and editing them 
+* *2 hours* Creating a plan for the following week 
+
+## Week 13 [Project Week]
+
+### 13 Dec 2021
+* *3 hours* Code Tidy up and adding some documentation 
+* *2 hours* Adding more information to the repository 
+
+### 14 Dec 2021
+* No progress - Assessment centre all day 
+
+### 15 Dec 2021
+* *1 hour* Adding a 'media' file to the project repository to store all visualisations and demos 
+* *1 hour* Updating the progress of the project to the supervisors via a mid-week status report 
+* *3 hours* Researching information on robots following a black line 
+
+### 16 Dec 2021
+* *2 hours* Gathering more information for line tracking 
+* *2 hours* Preparing the gathered information before the weekly meeting 
+* *2 hours* Attempting to continue with the switch camera feature 
+
+### 17 Dec 2021
+* *0.5 hour* Meeting with the supervisor 
+* *2 hours* Writing up the end of semester status report 
+* *0.5 hour* Submitting status report and sending it to the supervisor 
+* *2 hours* Again, continuing with the switch camera feature 
+
+### 18 Dec 2021
+* *2 hours* Deciding how to layout the repository readme file 
+* *2 hours* Planning which recorded demos and visualisations should be used 
+* *3 hours* Continuing with more research about line tracking 
+
+### 19 Dec 2021
+* *2 hours* Continuing with general research 
+* *2 hours* Planning how I want to start writing the dissertation 
+* *1 hour* Tidying any remaining pieces of implementation
