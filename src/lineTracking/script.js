@@ -11,9 +11,13 @@
     const video = document.querySelector("#video");
     const btnChangeCamera = document.querySelector("#btnChangeCamera");
     const btnGreyscale = document.querySelector("#btnGreyscale");
+    const btnConnect = document.querySelector('#btnConnect');
+    const btnDisconnect = document.querySelector('#btnDisconnect');
     const canvas = document.getElementById("canvas");
     const devicesSelect = document.getElementById("#devicesSelect");
     var context = canvas.getContext('2d');
+
+    let currentAction;
   
     // video constraints
     const constraints = {
@@ -51,15 +55,34 @@
       drawFrame(video);
 
     });
+
+    btnConnect.addEventListener("click", function() {
+      connect();
+    });
+
+    btnDisconnect.addEventListener("click", function() {
+      disconnect();
+    });
+
+    /* Function to move/update the moving action of the robot */
+    function move(action) {
+      if (action != currentAction) {
+        currentAction = action;
+        currentAction();
+      }
+    }
     
     function moveRobot(centreSensor, leftSensor, rightSensor) {
 
       if (centreSensor[0] < 60) {
         console.log("robot moving straight");
+        move(forward);
       } else if (leftSensor[0] < 60) {
         console.log("robot moving left");
+        move(left);
       } else if (rightSensor[0] < 60) {
         console.log("robot moving right");
+        move(right);
       }
     }
 
@@ -97,18 +120,18 @@
     }
 
 
-let connection;
+    let connection;
 
-function onLine(lineString) {
-  console.log(lineString.trim());
-}
+    function onLine(lineString) {
+      console.log(lineString.trim());
+    }
 
-function connect() {
-  if (connection) {
-    disconnect()
-  }
+    function connect() {
+      if (connection) {
+        disconnect()
+      }
   
-  UART.connect(function(c) {
+      UART.connect(function(c) {
         if (!c) {
           console.log("Couldn't connect!");
           return;
@@ -126,54 +149,55 @@ function connect() {
             i = buf.indexOf("\n");
           }
         });
-  });
-}
+      });
+    }
 
-function disconnect() {
-  if (connection) {
-    connection.close();
-    connection = undefined;
-  }
-}
-
-/**
- * Following functions implement the actions the robot can take 
- *  Forward
- *  Backward
- *  Left
- *  Right
- *  Stop
- */
-
-function forward() {
-  if (connection) {
-    connection.write('forward();\n');
-  }
-}
-
-function backward() {
-  if (connection) {
-    connection.write('backward();\n');
+    function disconnect() {
+      if (connection) {
+        connection.close();
+        connection = undefined;
       }
-}
+    }
 
-function left() {
-  if (connection) {
-    connection.write('left();\n');
-  }
-}
+  /**
+    * Following functions implement the actions the robot can take 
+    *  Forward
+    *  Backward
+    *  Left
+    *  Right
+    *  Stop
+  */
 
-function right() {
-  if (connection) {
-    connection.write('right();\n');
-  }
-}
+    function forward() {
+      if (connection) {
+        connection.write('forward();\n');
+      }
+    }       
 
-function stop() {
-  if (connection) {
-    connection.write("stop();\n");
-  }
-}
+    function backward() {
+      if (connection) {
+        connection.write('backward();\n');
+      }
+    }
+
+    function left() {
+      if (connection) {
+        connection.write('left();\n');
+      }
+    }
+
+    function right() {
+      if (connection) {
+        connection.write('right();\n');
+      }
+    }
+
+    function stop() {
+      if (connection) {
+        connection.write("stop();\n");
+      }
+    }
+    
     // stop video stream
     function stopVideoStream() {
       if (videoStream) {
