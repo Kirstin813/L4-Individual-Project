@@ -5,6 +5,8 @@
 * 2389589R
 * Jonathan Grizou
 
+## Semester 1 
+
 ## Week 2 
 
 ### 28 Sept 2021 
@@ -299,7 +301,7 @@
 * *2 hours* Recording and editing more demos 
 
 ### 10 Dec 2021
-* *1 hour* meeting with the supervisor
+* *1 hour* Meeting with the supervisor
 * *2 hours* Continuation with the switch camera implementation 
 * *2 hours* Adjusting the visual outlook of the webpage 
 
@@ -339,10 +341,103 @@
 
 ### 18 Dec 2021
 * *2 hours* Deciding how to layout the repository readme file 
-* *2 hours* Planning which recorded demos and visualisations should be used 
+* *2 hours* Planning which recorded demos and visualizations should be used 
 * *3 hours* Continuing with more research about line tracking 
 
 ### 19 Dec 2021
 * *2 hours* Continuing with general research 
 * *2 hours* Planning how I want to start writing the dissertation 
 * *1 hour* Tidying any remaining pieces of implementation
+
+## Winter Break 
+
+## Semester 2 
+
+## Week 14 
+
+### 10 Jan 22
+* *1 hour* Reading over status report from December to see where I left off 
+* *2 hours* Looking over all current implementation to note of possible changes 
+
+### 11 Jan 22
+* *2 hours* Updating the repository with timelog entries missed out 
+* *3 hours* Reading over research papers saved before winter break 
+* *1 hour* Making a plan for stage 3 'follow a black line*
+
+### 12 Jan 22  
+* *1 hour* Began writing dissertation abstract 
+* *1 hour* Continue writing dissertation, make a start to the introduction 
+
+### 13 Jan 22 
+* *2 hours* Start implementation for line tracking - loading video feed first 
+
+### 14 Jan 22
+* *0.5 hour* Weekly meeting with the supervisor 
+
+### 15 Jan 22
+* *1 hour* Continue with implementation - switching the camera to access the back facing camera 
+
+### 16 Jan 22
+* No progress 
+
+## Week 15
+
+### 17 Jan 22
+* *1 hour* Continue with dissertation writing 
+
+### 18 Jan 22 
+* *1 hour* Continue with looking through research 
+
+### 19 Jan 22
+* *1 hour* Editting dissertation abstract 
+
+### 20 Jan 22 
+* *2 hours* Continue with implementation - trying out a different way to switch the camera 
+
+### 21 Jan 22 
+* *0.5 hour* Weekly meeting with the supervisor 
+
+### 22 Jan 22 
+* No progress 
+
+### 23 Jan 22 
+* No progress 
+
+## Week 16
+
+### 24 Jan 22 
+* *1 hour* Continue with editting abstract and writing the introduction 
+
+### 25 Jan 22 
+* *2 hour* Applying a greyscale filter over the pixel data on the canvas feed 
+
+### 26 Jan 22 
+* *1 hour* Reverting greyscale filter to a javascript alternative (done without looping through all pixels and averaging all rgb values)
+* *2 hours* Transferring all dissertation writing into a Google document to allow the supervisor to continuously add comments where improvements can be made 
+* *1 hour* Adding a dissertation outline plan which details what each section will discuss 
+
+### 27 Jan 22 
+* *1.5 hours* Creating a line circuit for the for the robot to tracking 
+* *1 hour* Gathering pixel data to mimic the centre "sensors" to detect the colour black 
+* *1 hour* Adding shape visualization to show where the sensors are on the canvas 
+
+### 28 Jan 22 
+* *0.5 hour* Weekly meeting with the supervisor 
+
+### 29 Jan 22
+* No progress
+
+### 30 Jan 22
+* No progress 
+
+## Week 17 
+
+### 31 Jan 22
+* *1 hour* Adding a left and right sensor so that the robot knows when to turn left or right 
+
+### 1 Feb 22
+* *1 hour* Adding the UART.js connection and action functions 
+
+### 2 Feb 22 
+* *2 hour* Updating missing timelog entries 
+* *0.5 hour* Commiting to GitHub all updated changes 

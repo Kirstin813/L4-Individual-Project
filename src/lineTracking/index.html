@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Camera</title>
+  
+  <script src="https://www.espruino.com/js/uart.js"></script>
+</head>
+
+<body>
+  <h1 class="title">
+    Line Tracking
+  </h1>
+  <div>
+    <button class="button" id="btnChangeCamera">Switch Camera</button>
+    <button class="button" id="btnGreyscale">Black and White</button>
+  </div>
+  
+  <div>
+    <button onclick="connect();" class="connection">Connect</button>
+    <button onclick="disconnect();" class="connection">Disconnect</button>
+  </div>
+
+  <video autoplay id="video"></video>
+
+  <canvas id="canvas"></canvas>
+  <script src="script.js"></script>
+</body>
+
+</html>
