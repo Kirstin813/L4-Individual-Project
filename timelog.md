@@ -441,3 +441,4 @@
 ### 2 Feb 22 
 * *2 hour* Updating missing timelog entries 
 * *0.5 hour* Commiting to GitHub all updated changes 
+* *1 hour* Fixing connection issues
