@@ -88,19 +88,19 @@
       context.drawImage(video, 0, 0);
       
       // need to make these adjustable so that it can be a similar scale on a mobile device 
-      var centre = context.getImageData(265, 185, 25, 25);
+      var centre = context.getImageData((canvas.width / 2) - 25, (canvas.height / 2) - 25, 25, 25);
       context.beginPath();
-      context.arc(265, 185, 50, 0, 2 * Math.PI);
+      context.arc((canvas.width / 2) - 25, (canvas.height / 2) - 25, 50, 0, 2 * Math.PI);
       context.stroke();
       
-      var left = context.getImageData(83, 185, 25, 25);
+      var left = context.getImageData((canvas.width / 4) - 25, (canvas.height / 2) - 25, 25, 25);
       context.beginPath();
-      context.arc(83, 185, 50, 0, 2 * Math.PI);
+      context.arc((canvas.width / 4) - 25, (canvas.height / 2) - 25, 50, 0, 2 * Math.PI);
       context.stroke();
 
-      var right = context.getImageData(446, 185, 25 , 25);
+      var right = context.getImageData(((canvas.width / 2) + canvas.width / 4) - 25, (canvas.height / 2) - 25, 25 , 25);
       context.beginPath();
-      context.arc(446, 185, 50, 0, 2 * Math.PI);
+      context.arc(((canvas.width / 2) + canvas.width / 4) - 25, (canvas.height / 2) - 25, 50, 0, 2 * Math.PI);
       context.stroke();
 
       
