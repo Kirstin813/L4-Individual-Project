@@ -13,6 +13,7 @@
     const btnGreyscale = document.querySelector("#btnGreyscale");
     const btnConnect = document.querySelector('#btnConnect');
     const btnDisconnect = document.querySelector('#btnDisconnect');
+    const btnStop = document.querySelector('#btnStop');
     const canvas = document.getElementById("canvas");
     const devicesSelect = document.getElementById("#devicesSelect");
     var context = canvas.getContext('2d');
@@ -55,7 +56,11 @@
     btnDisconnect.addEventListener("click", function() {
       disconnect();
     });
-
+    
+    btnStop.addEventListener("click", function() {
+      stop();
+    });
+    
     /* Function to move/update the moving action of the robot */
     function move(action) {
       if (action != currentAction) {
