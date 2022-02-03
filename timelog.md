@@ -442,3 +442,9 @@
 * *2 hour* Updating missing timelog entries 
 * *0.5 hour* Commiting to GitHub all updated changes 
 * *1 hour* Fixing connection issues
+
+### 3 Feb 22 
+* *2 hours* Readjusting video size and placement of the sensors 
+* *0.5 hour* Recording demo
+* *0.5 hour* Creating a list of changes 
+* *0.5 hour* Updating Github and writing dissertation
