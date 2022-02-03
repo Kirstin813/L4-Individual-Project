@@ -10,12 +10,12 @@
 
 }
 
-.video {
+video {
     position: relative;
-    display: absolute;
+    display: block;
 }
 
-.canvas {
+canvas {
     position: relative;
     display: block;
 }
