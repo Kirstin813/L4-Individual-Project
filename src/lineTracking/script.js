@@ -67,13 +67,13 @@
     function moveRobot(centreSensor, leftSensor, rightSensor) {
 
       if (centreSensor[0] < 60) {
-        console.log("robot moving straight");
+        //console.log("robot moving straight");
         move(forward);
       } else if (leftSensor[0] < 60) {
-        console.log("robot moving left");
+        //console.log("robot moving left");
         move(left);
       } else if (rightSensor[0] < 60) {
-        console.log("robot moving right");
+        //console.log("robot moving right");
         move(right);
       }
     }

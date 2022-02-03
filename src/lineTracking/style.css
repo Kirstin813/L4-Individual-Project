@@ -9,3 +9,13 @@
     font-size: 16px;
 
 }
+
+.video {
+    position: relative;
+    display: absolute;
+}
+
+.canvas {
+    position: relative;
+    display: absolute;
+}
