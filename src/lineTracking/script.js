@@ -22,16 +22,8 @@
     // video constraints
     const constraints = {
       video: {
-        width: {
-          min: 520,
-          ideal: 580,
-          max: 640,
-        },
-        height: {
-          min: 360,
-          ideal: 420,
-          max: 480,
-        },
+        width: 640, 
+        height: 480
       },
     };
   
