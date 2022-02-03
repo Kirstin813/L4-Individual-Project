@@ -17,5 +17,5 @@
 
 .canvas {
     position: relative;
-    display: absolute;
+    display: block;
 }
