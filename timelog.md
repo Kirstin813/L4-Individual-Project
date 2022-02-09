@@ -448,3 +448,24 @@
 * *0.5 hour* Recording demo
 * *0.5 hour* Creating a list of changes 
 * *0.5 hour* Updating Github and writing dissertation
+
+### 4 Feb 22 
+* *0.5 hour* Weekly meeting with the supervisor 
+
+### 5 Feb 22
+* No progress 
+
+### 6 Feb 22 
+* No progress 
+
+## Week 18 
+
+### 7 Feb 22 
+* *1 hour* Dissertation writing 
+
+### 8 Feb 22 
+* No progress 
+
+### 9 Feb 22 
+* *3 hours* Applying changes discussed during weekly meeting - expand line sensors, average the pixel value, etc
+

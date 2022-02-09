@@ -82,11 +82,29 @@ Updated at the start of each week. Will outline plan for the week and what is ex
 
 ## Spring Semester
 
-* **Week 13**
 * **Week 14**
+    * Quick reminder/catch up from December 
+    * Update the repository 
+    * Begin implementation for line tracking stage 
+    * Begin writing dissertation - create dissertation plan and abstract
 * **Week 15**
+    * Continue writing dissertation 
+    * Continue with line tracking implementation 
+    * Weekly meeting with the supervisor
 * **Week 16**
+    * Continue with implementation - adding greyscale, creating 'sensors', etc 
+    * Create a line circuit for the line tracking 
+    * Weekly meeting with the supervisor 
 * **Week 17**
+    * Finished with line implementation 
+    * Continue with dissertation writing 
+    * Create some demos 
+    * Weekly meeting with the supervisor 
+* **Week 18**
+    * Apply changes to line tracking 
+    * Conduct research into fully self driving 
+    * Continue with dissertation writing 
+    * Start to think of ways to evaulate this project 
 * **Week 19**
 * **Week 20**
 * **Week 21**

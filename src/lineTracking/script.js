@@ -71,16 +71,29 @@
     
     function moveRobot(centreSensor, leftSensor, rightSensor) {
 
-      if (centreSensor[0] < 60) {
-        //console.log("robot moving straight");
+      if (centreSensor < 50) {
+        //console.log("robot moving forward");
         move(forward);
-      } else if (leftSensor[0] < 60) {
+      } else if (leftSensor < 50) {
         //console.log("robot moving left");
         move(left);
-      } else if (rightSensor[0] < 60) {
+      } else if (rightSensor < 50) {
         //console.log("robot moving right");
         move(right);
       }
+    }
+
+    function getAverage(pixels) {
+
+      const pixelArr = [];
+      const average = arr => arr.reduce((a,b) => a + b, 0) / arr.length;
+
+      for (let i = 0; i < pixels.data.length; i = i+4) {
+        pixelArr.push(pixels.data[i])
+      }
+
+      return average(pixelArr).toFixed(2);
+
     }
 
     function drawFrame(video) {
@@ -93,24 +106,24 @@
       context.drawImage(video, 0, 0);
       
       // need to make these adjustable so that it can be a similar scale on a mobile device 
-      var centre = context.getImageData((canvas.width / 2), canvas.height - 50, 25, 25);
-      context.beginPath();
-      context.arc((canvas.width / 2), canvas.height - 50, 50, 0, 2 * Math.PI);
-      context.stroke();
-      
-      var left = context.getImageData((canvas.width / 4), canvas.height - 50, 25, 25);
-      context.beginPath();
-      context.arc((canvas.width / 4), canvas.height - 50, 50, 0, 2 * Math.PI);
-      context.stroke();
+      var left = getAverage(context.getImageData(0, canvas.height - 50, (canvas.width / 3), 50));
 
-      var right = context.getImageData(((canvas.width / 2) + canvas.width / 4), canvas.height - 50, 25 , 25);
-      context.beginPath();
-      context.arc(((canvas.width / 2) + canvas.width / 4), canvas.height - 50, 50, 0, 2 * Math.PI);
-      context.stroke();
+      var centre = getAverage(context.getImageData((canvas.width / 3), canvas.height - 50, (canvas.width / 3), 50));
+    
+      var right = getAverage(context.getImageData(2 * (canvas.width / 3), canvas.height - 50, (canvas.width / 3), 50));
+      
 
       
-      moveRobot(centre.data, left.data, right.data);
+      context.strokeStyle = 'white';
+      context.lineWidth = 1;
+      context.strokeRect(0, canvas.height - 50, (canvas.width / 3), 50);
+      context.strokeRect((canvas.width / 3), canvas.height - 50, (canvas.width / 3), 50);
+      context.strokeRect(2 * (canvas.width / 3), canvas.height - 50, (canvas.width / 3) , 50);
+      
 
+      //console.log(context.getImageData(2 * (canvas.width / 3), canvas.height - 50, canvas.width, canvas.height).data);
+      moveRobot(centre, left, right);
+ 
       setTimeout(function () {
         drawFrame(video);
       }, 10);
