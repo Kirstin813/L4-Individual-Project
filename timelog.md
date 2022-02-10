@@ -469,3 +469,6 @@
 ### 9 Feb 22 
 * *3 hours* Applying changes discussed during weekly meeting - expand line sensors, average the pixel value, etc
 
+### 10 Feb 22
+* *1.5 hour* Creating new line circuit using paint instead of black tape 
+* *1 hour* Cody tidy up

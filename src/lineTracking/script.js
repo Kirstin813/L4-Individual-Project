@@ -1,4 +1,6 @@
 (function () {
+
+  /* Checking if the media devices is suitable for the camera api */
     if (
       !"mediaDevices" in navigator ||
       !"getUserMedia" in navigator.mediaDevices
@@ -7,7 +9,7 @@
       return;
     }
   
-    // get page elements
+    // Canvas and Video elements
     const video = document.querySelector("#video");
     const btnChangeCamera = document.querySelector("#btnChangeCamera");
     const btnGreyscale = document.querySelector("#btnGreyscale");
@@ -15,9 +17,9 @@
     const btnDisconnect = document.querySelector('#btnDisconnect');
     const btnStop = document.querySelector('#btnStop');
     const canvas = document.getElementById("canvas");
-    const devicesSelect = document.getElementById("#devicesSelect");
     var context = canvas.getContext('2d');
 
+    // Variable for the current action the robot is taking 
     let currentAction;
   
     // video constraints
@@ -29,7 +31,7 @@
     };
   
 
-    // use front face camera
+    // default true (front facing camera), false (back facing camera)
     let useFrontCamera = true;
   
     // current video stream
@@ -42,6 +44,7 @@
       initializeCamera();
     });
 
+    // displaying the canvas feed 
     btnGreyscale.addEventListener("click", function() {
       video.play();
     
@@ -49,14 +52,17 @@
 
     });
 
+    // connecting to the robot
     btnConnect.addEventListener("click", function() {
       connect();
     });
 
+    // disconnecting from the robot 
     btnDisconnect.addEventListener("click", function() {
       disconnect();
     });
     
+    // stop the robot moving 
     btnStop.addEventListener("click", function() {
       stop();
     });
@@ -69,20 +75,23 @@
       }
     }
     
+    /* Conditionals for each sensor signalling which direction to move the robot */
     function moveRobot(centreSensor, leftSensor, rightSensor) {
 
-      if (centreSensor < 50) {
-        //console.log("robot moving forward");
+      //console.log(centreSensor);
+      if (centreSensor < 90) {
+        console.log("robot moving forward");
         move(forward);
-      } else if (leftSensor < 50) {
-        //console.log("robot moving left");
+      } else if (leftSensor < 90) {
+        console.log("robot moving left");
         move(left);
-      } else if (rightSensor < 50) {
-        //console.log("robot moving right");
+      } else if (rightSensor < 90) {
+        console.log("robot moving right");
         move(right);
       }
     }
 
+    // Function returning the average integer of the pixel array 
     function getAverage(pixels) {
 
       const pixelArr = [];
@@ -92,6 +101,7 @@
         pixelArr.push(pixels.data[i])
       }
 
+      // returns average integer to 2 decimal places
       return average(pixelArr).toFixed(2);
 
     }
@@ -101,19 +111,21 @@
       canvas.width = video.videoWidth;
       canvas.height = video.videoHeight;
 
+      // converting the canvas into greyscale filter 
       context.filter = 'grayscale(1)';
 
       context.drawImage(video, 0, 0);
       
-      // need to make these adjustable so that it can be a similar scale on a mobile device 
+      /**
+       * Retrieving pixel data from the bottom section of the canvas 
+       * Each pixel array will act as sensors to detect the black line 
+       */
       var left = getAverage(context.getImageData(0, canvas.height - 50, (canvas.width / 3), 50));
-
       var centre = getAverage(context.getImageData((canvas.width / 3), canvas.height - 50, (canvas.width / 3), 50));
-    
       var right = getAverage(context.getImageData(2 * (canvas.width / 3), canvas.height - 50, (canvas.width / 3), 50));
       
 
-      
+      /* Outline the sensors in a white rectangle border */
       context.strokeStyle = 'white';
       context.lineWidth = 1;
       context.strokeRect(0, canvas.height - 50, (canvas.width / 3), 50);
@@ -121,7 +133,7 @@
       context.strokeRect(2 * (canvas.width / 3), canvas.height - 50, (canvas.width / 3) , 50);
       
 
-      //console.log(context.getImageData(2 * (canvas.width / 3), canvas.height - 50, canvas.width, canvas.height).data);
+      // Calling function to start moving the robot using the retrieved sensors 
       moveRobot(centre, left, right);
  
       setTimeout(function () {
@@ -130,6 +142,7 @@
     }
 
 
+    // connection variable to store the state of the connection
     let connection;
 
     function onLine(lineString) {
@@ -208,7 +221,7 @@
       }
     }
     
-    // stop video stream
+    // Function to stop the video stream
     function stopVideoStream() {
       if (videoStream) {
         videoStream.getTracks().forEach((track) => {
