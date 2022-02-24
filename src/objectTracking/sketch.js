@@ -11,13 +11,15 @@ let switchFlag = false;
 let switchButton;
 let options;
 
+let canvas;
+
 function setup() {
-  var canvas = createCanvas(640, 480); 
+  canvas = createCanvas(740, 580); 
 
   /* Center the video */
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
-  canvas.position(x, y);
+  canvas.position(x, y+180);
 
 
   /* Default option is front facing camera */
@@ -30,7 +32,7 @@ function setup() {
   };
 
   video = createCapture(options); // Creates a HTML5 video using the webcam or the camera on a smartphone 
-  video.size(640, 480); // Resize the video to fit the display width and height 
+  video.size(740, 580); // Resize the video to fit the display width and height 
   video.hide(); // Hide the video feed 
   pixelDensity(1);
   noStroke();
@@ -38,7 +40,8 @@ function setup() {
 
   /* Adding a "switch camera" button to be able to switch the camera using createCapture */
   switchButton = createButton('Switch Camera');
-  switchButton.position(19, 100);
+  switchButton.position(10, y+800);
+  switchButton.style("font-family: 'Racing Sans One', cursive; color: white; padding: 10px 30px; background-color: #4DA167; font-size: 18px; border-radius: 10px; margin: 5px;")
   switchButton.mousePressed(switchCamera);
   
   colourMatch = color(255, 150, 0);  // Initial colour to match 
@@ -119,23 +122,24 @@ function draw() {
 /* Follows the given colour on the canvas */
 function followColour(colourPixel) {
       // If the colour is in the left third of the canvas then robot moves left 
+      console.log(colourPixel);
       if ( (colourPixel.x<=width/3) && (colourPixel.x>=0) ) {
         move(left)
         textSize(20);
         fill(255);
-        text("Moving Robot Left", 10, 470);
+        text("Moving Robot Left", 10, 570);
       // If the colour is in the middle of the canvas then robot moves forward 
       } else if ( (colourPixel.x > width/3) && (colourPixel.x < 2*width/3) ) {
         move(forward)
         textSize(20);
         fill(255);
-        text("Moving Robot Forward", 10, 470);
+        text("Moving Robot Forward", 10, 570);
       // If the colour is in the right third of the canvas then robot moves right 
       } else if ( (colourPixel.x > 2*width/3) && (colourPixel.x < width)) {
         move(right)
         textSize(20);
         fill(255);
-        text("Moving Robot Right", 10, 470);
+        text("Moving Robot Right", 10, 570);
       }
   
 }
