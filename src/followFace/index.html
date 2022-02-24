@@ -8,28 +8,47 @@
   <script src="drawing_utils.js" crossorigin="anonymous"></script>
   <script src="face_detection.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
   <meta charset="utf-8">
 
   <script src="https://www.espruino.com/js/uart.js"></script>
 
 </head>
 <body>
-  <h1>
-    Face Tracking
-  </h1>
-  <div>
-    <button onclick="connect();" class="connection">Connect</button>
-    <button onclick="disconnect();" class="connection">Disconnect</button>
+  <h1><span>Face Tracking</span></h1>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Instructions for Use</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal..</p>
+      </div>
+      <div class="modal-footer">
+        <h3>Thanks for reading :)</h3>
+      </div>
+    </div>
+  
   </div>
   <div>
-    <button id="btn-front">Front Camera</button>
-    <button id="btn-back">Back Camera</button>
+    <button class="connection" id="myBtn">Click here for instructions</button>
+    <button onclick="disconnect();" class="connection right-btn">Disconnect</button>
+    <button onclick="connect();" class="connection right-btn">Connect</button>
   </div>
   <div class="container">
     <video id="video" class="input_video" width="640" height="480"></video>
     <canvas class="output_canvas" width="640" height="480"></canvas>
-    <script src="sketch.js"></script>
   </div>
-
+  
+  <div>
+    <button id="btn-front" class="connection">Front Camera</button>
+    <button id="btn-back" class="connection">Back Camera</button>
+  </div>
+  <script src="sketch.js"></script>
 
 </body></html>

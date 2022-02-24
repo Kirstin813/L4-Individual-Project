@@ -5,23 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript Camera</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
   
   <script src="https://www.espruino.com/js/uart.js"></script>
 </head>
 
 <body>
-  <h1 class="title">
-    Line Tracking
-  </h1>
-  <div>
-    <button class="button" id="btnChangeCamera">Switch Camera</button>
-    <button class="button" id="btnGreyscale">Black and White</button>
-  </div>
+  <h1><span>Line Tracking</span></h1>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Instructions for Use</h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal..</p>
+      </div>
+      <div class="modal-footer">
+        <h3>Thanks for reading :)</h3>
+      </div>
+    </div>
   
+  </div>
   <div>
-    <button class="connection" id="btnConnect">Connect</button>
-    <button class="connection" id="btnDisconnect">Disconnect</button>
-    <button class="connection" id="btnStop">Stop</button>
+    <button class="connection" id="myBtn">Instructions</button>
+    <button class="connection" id="btnChangeCamera">Switch Camera</button>
+    <button class="connection" id="btnGreyscale">Black and White</button>
+    <button class="connection right-btn" id="btnStop">Stop</button>
+    <button class="connection right-btn" id="btnDisconnect">Disconnect</button>
+    <button class="connection right-btn" id="btnConnect">Connect</button>
+    
   </div>
 
   <video autoplay class="video" id="video"></video>
