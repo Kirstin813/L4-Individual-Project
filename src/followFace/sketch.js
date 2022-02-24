@@ -28,6 +28,7 @@ function setupCamera() {
         facingMode,
       },
     };
+  
 
     try {
       if (stream) {
@@ -42,7 +43,6 @@ function setupCamera() {
 
     videoElement.srcObject =  null;
     videoElement.srcObject = stream;
-    //videoElement.play();
 
     return new Promise((resolve) => {
       videoElement.onloadedmetadata = () => {
@@ -52,7 +52,7 @@ function setupCamera() {
   }
 }
 
-/* Event listeners for the back and front camera buttons */
+/* Event listeners for the back and front camera buttons 
 btnfront.addEventListener('click', () => {
   capture('user');
 });
@@ -60,6 +60,7 @@ btnfront.addEventListener('click', () => {
 btnback.addEventListener('click', () => {
   capture('environment');
 });
+*/
 
 /* Uses the results from the API to identify and track the face */
 function onResults(results) {
