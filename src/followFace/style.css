@@ -29,11 +29,10 @@
 }
   
 .connection {
-    font-family: 'Racing Sans One', cursive;
     color: white;
-    padding: 10px 30px;
+    padding: 10px 5px;
     background-color: #4DA167;
-    font-size: 18px;
+    font-size: 12px;
     border-radius: 10px;
     margin: 5px;
 }
@@ -97,25 +96,24 @@ body {
 }
   
 h1 {
-    font-size: 38pt;
+    font-size: 20pt;
     position: relative;
     color: #212738;
     font-family: 'Racing Sans One', cursive;
-}
+  }
   
-h1 span {
+  h1 span {
     background-color: #DEE5E5;
     padding-right: 10px;
-}
+  }
   
-h1:after {
+  h1:after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     height: 0.1em;
-    border-top: 48px solid #7284A8;
+    border-top: 28px solid #7284A8;
     z-index: -1;
-}
-  
+  }
