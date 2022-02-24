@@ -4,24 +4,22 @@
 }
 
 .connection {
-  font-family: 'Racing Sans One', cursive;
   color: white;
-  padding: 10px 10px;
+  padding: 10px 5px;
   background-color: #4DA167;
-  font-size: 15px;
+  font-size: 12px;
   border-radius: 10px;
   margin: 5px;
 }
 
 .action {
-  font-family: 'Racing Sans One', cursive;
   text-align: center;
   color: white;
-  padding: 25px 45px;
+  padding: 20px 40px;
   background-color: #7284A8;
   font-weight: 800;
   border-style: solid;
-  font-size: 15px;
+  font-size: 12px;
   border-radius: 10px;
 }
 
