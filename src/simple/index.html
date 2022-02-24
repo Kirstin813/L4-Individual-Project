@@ -4,17 +4,46 @@
     <script src="p5.js"></script>
     <script src="p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     
     <script src="https://www.espruino.com/js/uart.js"></script>
 
   </head>
   <body>
-    <script src="sketch.js"></script>
-    <div>
-      <button onclick="connect();" class="connection">Connect</button>
-      <button onclick="disconnect();" class="connection">Disconnect</button>
+    <h1><span>Simple Controller</span></h1>
+
+    
+
+    <button class="connection" id="myBtn">Click here for instructions</button>
+
+    <button onclick="disconnect();" class="connection right-btn">Disconnect</button>
+    <button onclick="connect();" class="connection right-btn">Connect</button>
+    
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Instructions for Use</h2>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the Modal..</p>
+        </div>
+        <div class="modal-footer">
+          <h3>Thanks for reading :)</h3>
+        </div>
+      </div>
+
     </div>
+
+    
+
+    <!-- Action Buttons -->
     <div class="center">
       <div class="flex jc">
         <button onclick="forward();" class="action margin-bottom">Forward</button>
@@ -28,5 +57,6 @@
         <button onclick="backward();" class="action">Backward</button>
       </div>
     </div>
+    <script src="sketch.js"></script>
   </body>
 </html>
