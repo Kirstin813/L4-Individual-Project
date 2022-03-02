@@ -417,7 +417,7 @@
 * *1 hour* Adding a dissertation outline plan which details what each section will discuss 
 
 ### 27 Jan 22 
-* *1.5 hours* Creating a line circuit for the for the robot to tracking 
+* *3 hours* Creating a line circuit for the for the robot to tracking 
 * *1 hour* Gathering pixel data to mimic the centre "sensors" to detect the colour black 
 * *1 hour* Adding shape visualization to show where the sensors are on the canvas 
 
@@ -462,6 +462,7 @@
 
 ### 7 Feb 22 
 * *1 hour* Dissertation writing 
+* *1.5 hours* Researched how to make the robot move more like an actual car
 
 ### 8 Feb 22 
 * No progress 
@@ -470,5 +471,88 @@
 * *3 hours* Applying changes discussed during weekly meeting - expand line sensors, average the pixel value, etc
 
 ### 10 Feb 22
-* *1.5 hour* Creating new line circuit using paint instead of black tape 
+* *2 hour* Creating new line circuit using paint instead of black tape 
 * *1 hour* Cody tidy up
+* *1 hour* Testing the robot on the new circuit 
+* *1 hour* Typing up status report for meeting 
+
+### 11 Feb 22
+* *0.5 hour* Meeting with the supervisor 
+* *2 hours* Writing the dissertation 
+
+### 12 Feb 22 
+* *2 hours* Fixing issues with the line tracking 
+* *3 hours* Reverting back to using black type as black paint was not working 
+* *1 hour* Dissertation writing
+
+### 13 Feb 22
+* No progress 
+
+## Week 19 
+
+### 14 Feb 22
+* *3 hours* Looking at some pre-trained models 
+
+### 15 Feb 22
+* *4 hours* Recording other demos 
+
+### 16 Feb 22
+* *2 hours* Editting the demos 
+
+### 17 Feb 22
+* *2 hours* Dissertation writing
+
+### 18 Feb 22
+* *0.5 hour* Meeting with the supervisor 
+* *2 hours* Continuing with dissertation writing 
+
+### 19 Feb 22
+* *2 hours* Researching more pre-trained models 
+
+### 20 Feb 22
+* No progress
+
+## Week 20 
+
+### 21 Feb 22
+* *2 hours* Looking into a pre-trained model in MediaPipe
+
+### 22 Feb 22
+* *1 hour* Writing the introduction for dissertation 
+
+### 23 Feb 22
+* *4 hours* Redesigning webpages 
+* *1 hour* Dissertation writing 
+
+### 24 Feb 22
+* *2 hours* Making minor changes to the web page designs 
+* *1 hour* Writing up status report from tomorrows meeting 
+
+### 25 Feb 22
+* *0.5 hour* Meeting with the supervisor 
+* *1 hour* Continuing with dissertation writing 
+
+### 26 Feb 22
+* *2 hours* Created a setup for the final stage implementation 
+
+### 27 Feb 22
+* No progress
+
+## Week 21 
+
+### 28 Feb 22
+* *2 hours* Read the documentation on MediaPipe 
+
+### 1 Mar 22
+* *1 hour* Dissertation writing 
+
+### 2 Mar 22
+* 4 hours* Updating timelogs, weekly plan and add meeting notes 
+
+### 3 Mar 22
+
+### 4 Mar 22
+
+### 5 Mar 22
+
+### 6 Mar 22

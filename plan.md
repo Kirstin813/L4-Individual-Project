@@ -102,12 +102,24 @@ Updated at the start of each week. Will outline plan for the week and what is ex
     * Weekly meeting with the supervisor 
 * **Week 18**
     * Apply changes to line tracking 
-    * Conduct research into fully self driving 
+    * Conduct research into fully self-driving 
     * Continue with dissertation writing 
-    * Start to think of ways to evaulate this project 
+    * Start to think of ways to evaluate this project 
 * **Week 19**
+    * Record more demos 
+    * Revert back to using black tape for line tracking 
+    * Find a few pre-trained models 
+    * Weekly meeting with the supervisor 
 * **Week 20**
+    * Choose a pre-trained model to work with 
+    * Working on re-designing web pages 
+    * Continue with dissertation writing 
+    * Weekly meeting with the supervisor
 * **Week 21**
+    * Continue with implementation for the final stage 
+    * Continue with dissertation writing 
+    * Update timelogs and plan files 
+    * Weekly meeting with the supervisor 
 * **Week 22**
 * **Week 23 [TERM ENDS]**
 * **Week 24** Dissertation submission deadline and presentations.
