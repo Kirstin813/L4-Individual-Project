@@ -1,6 +1,26 @@
 const videoElement = document.getElementsByClassName('input_video')[0];
+const canvasElement = document.getElementsByClassName('output_canvas')[0];
+const canvasCtx = canvasElement.getContext('2d');
+
+const btnConnect = document.querySelector('#btnConnect');
+const btnDisconnect = document.querySelector('#btnDisconnect');
+const btnStop = document.querySelector('#btnStop');
 
 
+// connecting to the robot
+btnConnect.addEventListener("click", function() {
+  connect();
+});
+
+// disconnecting from the robot 
+btnDisconnect.addEventListener("click", function() {
+  disconnect();
+});
+
+// stop the robot moving 
+btnStop.addEventListener("click", function() {
+  stop();
+});
 // connection variable to store the state of the connection
 let connection;
 
@@ -105,3 +125,42 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+const drawingUtils = window;
+const mpObjectron = window;
+
+function onResults(results) {
+  canvasCtx.save();
+  canvasCtx.drawImage(
+      results.image, 0, 0, canvasElement.width, canvasElement.height);
+  if (!!results.objectDetections) {
+    for (const detectedObject of results.objectDetections) {
+      // Reformat keypoint information as landmarks, for easy drawing.
+      const landmarks = detectedObject.keypoints.map(x => x.point2d);
+      // Draw bounding box.
+      drawingUtils.drawConnectors(canvasCtx, landmarks,
+          mpObjectron.BOX_CONNECTIONS, {color: '#FF0000'});
+      // Draw centroid.
+      drawingUtils.drawLandmarks(canvasCtx, [landmarks[0]], {color: '#FFFFFF'});
+    }
+  }
+  canvasCtx.restore();
+}
+
+const objectron = new Objectron({locateFile: (file) => {
+  return `https://cdn.jsdelivr.net/npm/@mediapipe/objectron/${file}`;
+}});
+objectron.setOptions({
+  modelName: 'Shoe',
+  maxNumObjects: 3,
+});
+objectron.onResults(onResults);
+
+const camera = new Camera(videoElement, {
+  onFrame: async () => {
+    await objectron.send({image: videoElement});
+  },
+  width: 500,
+  height: 360
+});
+camera.start();

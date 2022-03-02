@@ -547,7 +547,8 @@
 * *1 hour* Dissertation writing 
 
 ### 2 Mar 22
-* 4 hours* Updating timelogs, weekly plan and add meeting notes 
+* *4 hours* Updating timelogs, weekly plan and added meeting notes 
+* *2 hours* Adjusting code from MediaPipe to suit my needs 
 
 ### 3 Mar 22
 
