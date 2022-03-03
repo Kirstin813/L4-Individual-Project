@@ -151,7 +151,7 @@ function onResults(results) {
 }
 
 const objectron = new Objectron({locateFile: (file) => {
-  return `https://cdn.jsdelivr.net/npm/@mediapipe/objectron/${file}`;
+  return `https://cdn.jsdelivr.net/npm/@mediapipe/objectron@0.3.1627447724/${file}`;
 }});
 objectron.setOptions({
   modelName: 'Cup',
@@ -167,3 +167,6 @@ const camera = new Camera(videoElement, {
   height: 360
 });
 camera.start();
+
+
+
