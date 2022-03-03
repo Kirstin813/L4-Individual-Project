@@ -19,6 +19,8 @@ const constraints = {
 // default true (front facing camera), false (back facing camera)
 let useFrontCamera = true;
 
+let stream;
+
 /** This section allows the camera to be switched.
  * Current Status: NOT WORKING
  */
@@ -31,8 +33,6 @@ async function setupCamera() {
   } 
 
   constraints.video.facingMode = useFrontCamera ? "user" : "environment";
-
-  let stream;
   
   try {
     if (stream) {
