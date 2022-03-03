@@ -126,6 +126,46 @@ window.onclick = function(event) {
   }
 }
 
+function setupCamera() {
+
+  const supports = navigator.mediaDevices.getSupportedConstraints();
+  if(!supports['facingMode']) {
+    alert('Browser is not supported');
+  } 
+
+  let stream;
+
+  const capture = async facingMode => {
+    const options = {
+      audio: false,
+      video: {
+        facingMode: "environment",
+      },
+    };
+  
+
+    try {
+      if (stream) {
+        const tracks = stream.getTracks();
+        tracks.forEach(track => track.stop());
+      }
+      stream = await navigator.mediaDevices.getUserMedia(options);
+    } catch (e) {
+      alert(e);
+      return;
+    }
+
+    videoElement.srcObject =  null;
+    videoElement.srcObject = stream;
+
+    return new Promise((resolve) => {
+      videoElement.onloadedmetadata = () => {
+        resolve(videoElement);
+      };
+    });
+  }
+}
+
 const drawingUtils = window;
 const mpObjectron = window;
 
@@ -161,6 +201,7 @@ objectron.onResults(onResults);
 
 const camera = new Camera(videoElement, {
   onFrame: async () => {
+    await setupCamera();
     await objectron.send({image: videoElement});
   },
   width: 500,

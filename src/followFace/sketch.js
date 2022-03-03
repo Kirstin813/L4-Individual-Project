@@ -8,59 +8,61 @@ const btnback = document.querySelector('#btn-back');
 
 let currentAction;
 
+const constraints = {
+  video: {
+    width: 500, 
+    height: 360
+  },
+};
+
+
+// default true (front facing camera), false (back facing camera)
+let useFrontCamera = true;
+
 /** This section allows the camera to be switched.
  * Current Status: NOT WORKING
  */
 
-function setupCamera() {
+async function setupCamera() {
 
   const supports = navigator.mediaDevices.getSupportedConstraints();
   if(!supports['facingMode']) {
     alert('Browser is not supported');
   } 
 
+  constraints.video.facingMode = useFrontCamera ? "user" : "environment";
+
   let stream;
-
-  const capture = async facingMode => {
-    const options = {
-      audio: false,
-      video: {
-        facingMode,
-      },
-    };
   
-
-    try {
-      if (stream) {
-        const tracks = stream.getTracks();
-        tracks.forEach(track => track.stop());
-      }
-      stream = await navigator.mediaDevices.getUserMedia(options);
-    } catch (e) {
-      alert(e);
-      return;
+  try {
+    if (stream) {
+      const tracks = stream.getTracks();
+      tracks.forEach(track => track.stop());
     }
-
-    videoElement.srcObject =  null;
-    videoElement.srcObject = stream;
-
-    return new Promise((resolve) => {
-      videoElement.onloadedmetadata = () => {
-        resolve(videoElement);
-      };
-    });
+    stream = await navigator.mediaDevices.getUserMedia(constraints);
+  } catch (e) {
+    alert(e);
+    return;
   }
+
+  videoElement.srcObject =  null;
+  videoElement.srcObject = stream;
+
+  return new Promise((resolve) => {
+    videoElement.onloadedmetadata = () => {
+      resolve(videoElement);
+    };
+  });
 }
 
-/* Event listeners for the back and front camera buttons 
+
+//Event listeners for the back and front camera buttons 
 btnfront.addEventListener('click', () => {
-  capture('user');
+  useFrontCamera = !useFrontCamera;
+
+  setupCamera();
 });
 
-btnback.addEventListener('click', () => {
-  capture('environment');
-});
-*/
 
 /* Uses the results from the API to identify and track the face */
 function onResults(results) {
@@ -129,7 +131,6 @@ faceDetection.onResults(onResults);
 
 const camera = new Camera(videoElement, {
   onFrame: async () => {
-    await setupCamera();
     await faceDetection.send({image: videoElement});
   },
   width: 640,
