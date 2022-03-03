@@ -184,7 +184,9 @@ async function initializeCamera() {
 
   try {
     videoStream = await navigator.mediaDevices.getUserMedia(constraints);
+    videoElement.srcObject = null;
     videoElement.srcObject = videoStream;
+    videoElement.play();
   } catch (err) {
     alert("Could not access the camera");
   }
