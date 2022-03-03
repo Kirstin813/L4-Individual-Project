@@ -1,5 +1,5 @@
 const videoElement = document.querySelector("#video");
-const canvasElement = document.getElementsByClassName('output_canvas')[0];
+const canvasElement = document.getElementById("canvas");
 const canvasCtx = canvasElement.getContext('2d');
 
 const btnConnect = document.querySelector('#btnConnect');
@@ -199,5 +199,4 @@ const camera = new Camera(videoElement, {
   width: 500,
   height: 360
 });
-
 camera.start();
