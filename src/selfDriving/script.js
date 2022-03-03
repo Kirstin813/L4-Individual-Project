@@ -137,7 +137,10 @@ function onResults(results) {
     for (const detectedObject of results.objectDetections) {
       // Reformat keypoint information as landmarks, for easy drawing.
       const landmarks = detectedObject.keypoints.map(x => x.point2d);
+      console.log(detectedObject.keypoints.map(x => x.point3d));
       // Draw bounding box.
+
+      //console.log(landmarks);
       drawingUtils.drawConnectors(canvasCtx, landmarks,
           mpObjectron.BOX_CONNECTIONS, {color: '#FF0000'});
       // Draw centroid.
@@ -151,7 +154,7 @@ const objectron = new Objectron({locateFile: (file) => {
   return `https://cdn.jsdelivr.net/npm/@mediapipe/objectron/${file}`;
 }});
 objectron.setOptions({
-  modelName: 'Shoe',
+  modelName: 'Cup',
   maxNumObjects: 3,
 });
 objectron.onResults(onResults);

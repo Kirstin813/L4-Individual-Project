@@ -1,4 +1,4 @@
-.video {
+.input_video {
     display: none;
     position: absolute;
     top: 0;
@@ -15,7 +15,7 @@
     align-items:center;
 }
 
-.canvas {
+.output_canvas {
     padding: 30px;
     max-width: 100%;
     display: block;
