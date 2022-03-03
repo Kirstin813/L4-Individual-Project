@@ -551,6 +551,7 @@
 * *2 hours* Adjusting code from MediaPipe to suit my needs 
 
 ### 3 Mar 22
+* *5 hours* Implementing last stage
 
 ### 4 Mar 22
 
