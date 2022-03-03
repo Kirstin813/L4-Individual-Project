@@ -22,6 +22,7 @@
     // Variable for the current action the robot is taking 
     let currentAction;
   
+    
     // video constraints
     const constraints = {
       video: {
@@ -270,4 +271,6 @@
     }
   
     initializeCamera();
+
+    console.log(videoStream);
   })();

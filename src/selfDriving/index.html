@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
     
-    <!--<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/objectron@0.3.1627447724/objectron.js" crossorigin="anonymous"></script>
@@ -42,13 +42,12 @@
         <button class="connection" id="btnStop">Stop</button>
         <button class="connection right-btn" id="btnDisconnect">Disconnect</button>
         <button class="connection right-btn" id="btnConnect">Connect</button>
-        <button class="connection right-btn" id="startCamera">Open Camera</button>
     </div>
 
     <!-- Video Feed -->
     <div class="container">
-        <video  class="input_video" id="video"></video>
-        <canvas class="output_canvas" id="canvas"></canvas>
+        <video id="video" class="input_video"></video>
+        <canvas class="output_canvas" width="500" height="360"></canvas>
     </div>
 
     <script src="script.js"></script>
