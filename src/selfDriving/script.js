@@ -126,46 +126,6 @@ window.onclick = function(event) {
   }
 }
 
-function setupCamera() {
-
-  const supports = navigator.mediaDevices.getSupportedConstraints();
-  if(!supports['facingMode']) {
-    alert('Browser is not supported');
-  } 
-
-  let stream;
-
-  const capture = async facingMode => {
-    const options = {
-      audio: false,
-      video: {
-        facingMode: "environment",
-      },
-    };
-  
-
-    try {
-      if (stream) {
-        const tracks = stream.getTracks();
-        tracks.forEach(track => track.stop());
-      }
-      stream = await navigator.mediaDevices.getUserMedia(options);
-    } catch (e) {
-      alert(e);
-      return;
-    }
-
-    videoElement.srcObject =  null;
-    videoElement.srcObject = stream;
-
-    return new Promise((resolve) => {
-      videoElement.onloadedmetadata = () => {
-        resolve(videoElement);
-      };
-    });
-  }
-}
-
 const drawingUtils = window;
 const mpObjectron = window;
 
@@ -177,7 +137,7 @@ function onResults(results) {
     for (const detectedObject of results.objectDetections) {
       // Reformat keypoint information as landmarks, for easy drawing.
       const landmarks = detectedObject.keypoints.map(x => x.point2d);
-      console.log(detectedObject.keypoints.map(x => x.point3d));
+      // 3d - console.log(detectedObject.keypoints.map(x => x.point3d));
       // Draw bounding box.
 
       //console.log(landmarks);
@@ -191,7 +151,7 @@ function onResults(results) {
 }
 
 const objectron = new Objectron({locateFile: (file) => {
-  return `https://cdn.jsdelivr.net/npm/@mediapipe/objectron@0.3.1627447724/${file}`;
+  return `https://cdn.jsdelivr.net/npm/@mediapipe/objectron/${file}`;
 }});
 objectron.setOptions({
   modelName: 'Cup',
@@ -201,7 +161,6 @@ objectron.onResults(onResults);
 
 const camera = new Camera(videoElement, {
   onFrame: async () => {
-    await setupCamera();
     await objectron.send({image: videoElement});
   },
   width: 500,
