@@ -5,6 +5,8 @@ const canvasCtx = canvasElement.getContext('2d');
 const btnConnect = document.querySelector('#btnConnect');
 const btnDisconnect = document.querySelector('#btnDisconnect');
 const btnStop = document.querySelector('#btnStop');
+const frontCamera = document.querySelector('#frontCamera');
+const backCamera = document.querySelector('#backCamera');
 
 
 // connecting to the robot
@@ -21,6 +23,61 @@ btnDisconnect.addEventListener("click", function() {
 btnStop.addEventListener("click", function() {
   stop();
 });
+
+frontCamera.addEventListener("click", function() {
+  // do something 
+
+  const constraints = {
+    video: {
+      width: 500, 
+      height: 360,
+      facingMode: "user"
+    },
+  };
+
+  initializeCamera(constraints);
+
+});
+
+backCamera.addEventListener("click", function() {
+  // do something 
+
+  const constraints = {
+    video: {
+      width: 500, 
+      height: 360,
+      facingMode: "environment"
+    },
+  };
+
+  initializeCamera(constraints);
+})
+
+let videoStream;
+
+function stopVideoStream() {
+  if (videoStream) {
+    videoStream.getTracks().forEach((track) => {
+      track.stop();
+    });
+  }
+}
+
+// initialize
+async function initializeCamera(constraints) {
+  stopVideoStream();
+
+  try {
+    videoStream = await navigator.mediaDevices.getUserMedia(constraints);
+    window.stream = videoStream;
+    videoElement.srcObject = videoStream;
+    videoElement.play()
+  } catch (err) {
+    alert("Could not access the camera");
+  }
+
+}
+
 // connection variable to store the state of the connection
 let connection;
 
@@ -126,11 +183,13 @@ window.onclick = function(event) {
   }
 }
 
+
 const drawingUtils = window;
 const mpObjectron = window;
 
 function onResults(results) {
   canvasCtx.save();
+  //console.log(results.image);
   canvasCtx.drawImage(
       results.image, 0, 0, canvasElement.width, canvasElement.height);
   if (!!results.objectDetections) {
@@ -150,53 +209,26 @@ function onResults(results) {
   canvasCtx.restore();
 }
 
-const objectron = new Objectron({locateFile: (file) => {
-  return `https://cdn.jsdelivr.net/npm/@mediapipe/objectron@0.3.1627447724/${file}`;
-}});
-objectron.setOptions({
-  modelName: 'Cup',
-  maxNumObjects: 3,
-});
-objectron.onResults(onResults);
 
+function findCup() {
+  const objectron = new Objectron({locateFile: (file) => {
+    return `https://cdn.jsdelivr.net/npm/@mediapipe/objectron@0.3.1627447724/${file}`;
+  }});
+  objectron.setOptions({
+    modelName: 'Cup',
+    maxNumObjects: 3,
+  });
+  objectron.onResults(onResults);
 
-let videoStream;
-
-const constraints = {
-  video: {
-    width: 500, 
-    height: 360,
-    facingMode: "environment"
-  },
-};
+  const camera = new Camera(videoElement, {
+    onFrame: async () => {
+      await objectron.send({image: videoElement});
+    },
+    width: 500,
+    height: 360
+  });
   
-function stopVideoStream() {
-  if (videoStream) {
-    videoStream.getTracks().forEach((track) => {
-      track.stop();
-    });
-  }
+  camera.start();
 }
 
-// initialize
-async function initializeCamera() {
-  stopVideoStream();
-
-  try {
-    videoStream = await navigator.mediaDevices.getUserMedia(constraints);
-    videoElement.srcObject = null;
-    videoElement.srcObject = videoStream;
-  } catch (err) {
-    alert("Could not access the camera");
-  }
-}
-initializeCamera();
-
-const camera = new Camera(videoElement, {
-  onFrame: async () => {
-    await objectron.send({image: videoElement});
-  },
-  width: 500,
-  height: 360
-});
-camera.start();
+findCup();

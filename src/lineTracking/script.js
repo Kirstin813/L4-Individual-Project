@@ -271,6 +271,4 @@
     }
   
     initializeCamera();
-
-    console.log(videoStream);
   })();

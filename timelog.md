@@ -554,7 +554,15 @@
 * *5 hours* Implementing last stage
 
 ### 4 Mar 22
+* *0.5 hour* Meeting with the supervisor 
 
 ### 5 Mar 22
+* *1 hour* Dissertation writing 
 
 ### 6 Mar 22
+* *1 hour* Looking into ways to switch the camera 
+
+## Week 22
+
+### 7 Mar 22
+* *2 hours* Attempting to switch the camera 
