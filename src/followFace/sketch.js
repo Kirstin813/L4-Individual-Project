@@ -131,8 +131,8 @@ const camera = new Camera(videoElement, {
   onFrame: async () => {
     await faceDetection.send({image: videoElement});
   },
-  width: 640,
-  height: 480
+  width: 500,
+  height: 360
 });
 camera.start();
 

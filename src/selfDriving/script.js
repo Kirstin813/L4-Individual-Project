@@ -189,6 +189,7 @@ const mpObjectron = window;
 
 function onResults(results) {
   canvasCtx.save();
+  canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
 
   canvasElement.width = videoElement.videoWidth;
   canvasElement.height = videoElement.videoHeight;
