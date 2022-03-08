@@ -25,7 +25,6 @@ btnStop.addEventListener("click", function() {
 });
 
 frontCamera.addEventListener("click", function() {
-  // do something 
 
   const constraints = {
     video: {
@@ -40,7 +39,6 @@ frontCamera.addEventListener("click", function() {
 });
 
 backCamera.addEventListener("click", function() {
-  // do something 
 
   const constraints = {
     video: {
@@ -69,12 +67,14 @@ async function initializeCamera(constraints) {
 
   try {
     videoStream = await navigator.mediaDevices.getUserMedia(constraints);
-    window.stream = videoStream;
+    //window.stream = videoStream;
     videoElement.srcObject = videoStream;
-    videoElement.play()
+    //videoElement.play()
   } catch (err) {
     alert("Could not access the camera");
   }
+
+  findCup();
 
 }
 
@@ -189,6 +189,12 @@ const mpObjectron = window;
 
 function onResults(results) {
   canvasCtx.save();
+
+  canvasElement.width = videoElement.videoWidth;
+  canvasElement.height = videoElement.videoHeight;
+
+
+  canvasCtx.drawImage(videoElement, 0,  0);
   //console.log(results.image);
   canvasCtx.drawImage(
       results.image, 0, 0, canvasElement.width, canvasElement.height);
@@ -224,11 +230,9 @@ function findCup() {
     onFrame: async () => {
       await objectron.send({image: videoElement});
     },
-    width: 500,
-    height: 360
+    width: videoElement.videoWidth,
+    height: videoElement.videoHeight
   });
   
   camera.start();
 }
-
-findCup();

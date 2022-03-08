@@ -565,4 +565,7 @@
 ## Week 22
 
 ### 7 Mar 22
-* *2 hours* Attempting to switch the camera 
+* *3 hours* Attempting to switch the camera 
+
+### 8 Mar 22
+* *1 hour* Continuing with the switch camera
