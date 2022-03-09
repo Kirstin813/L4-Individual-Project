@@ -24,13 +24,15 @@ Using a given robotic car, pictured below, the smartphone will be placed on the 
 Using the robot's actions, the project will be divided into four stages, which increase in difficulty as each stage progresses. 
 
 1. [Follow a Coloured Object](https://kirstin813.github.io/L4-Individual-Project/src/objectTracking/) 
-<p align="center" width="100%">
-    <img width="33%" src="media/followobject.gif">
-</p>
+    <p align="center" width="100%">
+        <img width="33%" src="media/followobject.gif">
+    </p>
+
 2. [Follow a Face](https://kirstin813.github.io/L4-Individual-Project/src/followFace/)
-<p align="center" width="100%">
-    <img width="75%" src="media/followface.gif">
-</p>
+    <p align="center" width="100%">
+        <img width="75%" src="media/followface.gif">
+    </p>
+
 3. [Follow a Black Line](https://kirstin813.github.io/L4-Individual-Project/src/lineTracking/) 
 4. [Fully Self Driving](https://kirstin813.github.io/L4-Individual-Project/src/selfDriving/) 
 
