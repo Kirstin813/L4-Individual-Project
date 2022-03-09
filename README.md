@@ -29,7 +29,7 @@ Using the robot's actions, the project will be divided into four stages, which i
 </p>
 2. [Follow a Face](https://kirstin813.github.io/L4-Individual-Project/src/followFace/)
 <p align="center" width="100%">
-    <img width="33%" src="media/followface.gif">
+    <img width="75%" src="media/followface.gif">
 </p>
 3. [Follow a Black Line](https://kirstin813.github.io/L4-Individual-Project/src/lineTracking/) 
 4. [Fully Self Driving](https://kirstin813.github.io/L4-Individual-Project/src/selfDriving/) 
