@@ -569,3 +569,7 @@
 
 ### 8 Mar 22
 * *1 hour* Continuing with the switch camera
+
+### 9 Mar 22
+* *2 hours* Making minor changes to introduction for dissertation 
+* *2 hours* Creating gifs and updating readme 
