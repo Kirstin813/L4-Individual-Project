@@ -1,11 +1,39 @@
-## Code Structure
+## Build Instructions
 
-Each folder represents each stage of the project with the exception of 'simple' and 'ml5js_faceAPI'. 
+### Build steps - TODO
+List the steps required to build software. 
+Hopefully something simple like `pip install -e .` or `make` or `cd build; cmake ..`. In
+some cases you may have much more involved setup required.
+### Test steps - TODO
+List steps needed to show your software works. This might be running a test suite, or just starting the program; but something that could be used to verify your code is working correctly.
+Examples:
+* Run automated tests by running `pytest`
+* Start the software by running `bin/editor.exe` and opening the file `examples/example_01.bin`
 
-- Stage 1 is represented by 'objectTracking'
-- Stage 2 is represented by 'followFace'
-- Stage 3 is represented by ...
-- Stage 4 is represented by ...
+#### Requirements
+For the Web Bluetooth to work, your device needs Bluetooth 4.0-capable adaptor for it to work correctly. Almost all new computers/devices come with this, if not then you will need an external Bluetooth LE dongle if your computer or device:
+* Is an Apple Mac made before 2012
+* Is a Windows PC with a Windows version before 10
+* Is a Desktop PC - it may not have any wireless support at all
+* Is running Linux - it does work to an extent but would be better if an external USB adaptors was used
+
+For more information on if your device is compatible with Web Bluetooth visit: https://www.espruino.com/Quick+Start+BLE
+
+Note: If you are using iOS, Web Bluetooth only works when you have downloaded [this app](https://apps.apple.com/us/app/webble/id1193531073). Furthermore, for this project, the app will only work for the simple controller as it does not support `getUserMedia`.
+
+This project has been development using Javascript and Visual Studio Code.
+
+## Instructions for use
+
+#### Connecting to Robot 
+
+Once everything is set up, make sure that Bluetooth is enabled on both your device and the robot itself. The connection can be made by clicking on the `connect` button on the webpage. The `connect` is at the same place on every webpage. When the pop displays, you next want to choose `Web Bluetooth` which will then display all enabled Bluetooth devices nearby. Finally, click on the name of the robots Bluetooth and that is you connected. 
+
+    <p align="center" width="100%">
+        <img width="75%" src="media/connection.gif">
+    </p>
+    
+To disconnect from the robot, simply click on the `disconnect` button.
 
 ### Object Tracking 
 
