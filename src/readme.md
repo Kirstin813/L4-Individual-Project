@@ -35,31 +35,27 @@ Once everything is set up, make sure that Bluetooth is enabled on both your devi
     
 To disconnect from the robot, simply click on the `disconnect` button.
 
-### Object Tracking 
+#### Object Tracking 
 
-Using the [p5.js library](https://p5js.org/libraries/) the object tracking begins by access the camera on the smartphone using [`createCapture()`](https://p5js.org/reference/#/p5/createCapture). Once the camera has been accessed it displays the video feed onto the middle of the webpage. If we wanted to switch which camera we wanted to use on the smartphone then this can be easily done by clicking on the 'Switch Camera' button to switch between front and back camera.
+To work with object tracking visit [here](https://kirstin813.github.io/L4-Individual-Project/src/objectTracking/). To connect to the robot check out the above subsection or alternatively follow this [link](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#connecting-to-robot). 
 
-**insert visualisation**
+Now that we have connected to the robot, place your smartphone on the mount of the robot and switch the camera orientation to access the back facing camera. To do this, simple click on the `Switch Camera` and  we can now begin with our colour tracking. Choose an object with an idenfiying colour. **Make sure that the colour of the object does not match with the colour of the background on your video**. We find that colours such as red, blue, green and yellow work best. 
 
-Before the tracking begins, we must connect to the robot by clicking on the 'Connect' button. Once the webpage is connected to the robot we can start utilising the action functions; forward, left, and right. To start the object tracking, we must choose a colour to track, this is done by the mouse click event and is converted into a RGB pixel array. 
+Once you have found an object, position the object in front of the smartphoone so that it is visible from the displayed video. For the colour tracking to begin, click on the object displayed on the video feed and a small colour tracking circle should pop up as below. 
 
-**insert visualisation**
+<p align="center" width="100%">
+    <img src="../media/clickobject.gif">
+</p>
 
-To find the chosen colour on the camera feed, the entire canvas is converted into an RGB pixel array using [`.loadPixels()`](https://p5js.org/reference/#/p5/loadPixels) and stores it in `pixels`. Using the `pixels` array, we iterate through all pixels in the video feed (which starts from the top left hand corner) until it reachs a colour pixel that matches the chosen colour. 
+Once the object colour has been identified, the robot will begin to move forward as long as you have the object placed in the middle of the video. To allow the robot to move left or right, position the object accordingly in either the left or right sections of the video as seen below. 
 
-**insert visualisation**
+<p align="center" width="100%">
+    <img width="50%" src="../media/text.png">
+</p>
 
-Once the colour has been identified on the video feed, the tracking can begin! If the x coordinate of the matched colour is within the left third of the video it will move the robot to the left. This is indicated by the text display on the video feed. If the x coordinate is found within the middle of the feed then the robot moves forward and finally if the x coordinate is in the right third of the feed the it moves the robot to the right. 
+Congratulations, your robot is now following a coloured object. To stop the robot from tracking the object and stop moving, remove the visiblity of the object from the video feed and then disconnect from the robot. 
 
-**insert visualisation**
-
-We can stop the tracking at anytime by removing the coloured object that we are tracking from the video feed and press the 'stop' button. 
-
-**insert visualisation** 
-
-Below is a demo of this stage working by tracking a red coloured object:
-
-**insert demo**
+To watch a demo of this stage in action check out: https://youtu.be/LbqPyVP_ZSk
 
 ### Follow a Face
 
@@ -90,41 +86,4 @@ Below is a demo of this stage working:
 ### Self Driving 
 
 *Description of code*
- 
-## Build instructions
-
-**You must** include the instructions necessary to build and deploy this project successfully. If appropriate, also include 
-instructions to run automated tests. 
-
-### Requirements
-
-List the all of the pre-requisites software required to set up your project (e.g. compilers, packages, libraries, OS, hardware)
-
-For example:
-
-* Python 3.7
-* Packages: listed in `requirements.txt` 
-* Tested on Windows 10
-
-or another example:
-
-* Requires Raspberry Pi 3 
-* a Linux host machine with the `arm-none-eabi` toolchain (at least version `x.xx`) installed
-* a working LuaJIT installation > 2.1.0
-
-### Build steps
-
-List the steps required to build software. 
-
-Hopefully something simple like `pip install -e .` or `make` or `cd build; cmake ..`. In
-some cases you may have much more involved setup required.
-
-### Test steps
-
-List steps needed to show your software works. This might be running a test suite, or just starting the program; but something that could be used to verify your code is working correctly.
-
-Examples:
-
-* Run automated tests by running `pytest`
-* Start the software by running `bin/editor.exe` and opening the file `examples/example_01.bin`
 
