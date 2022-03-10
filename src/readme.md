@@ -29,9 +29,9 @@ This project has been development using Javascript and Visual Studio Code.
 
 Once everything is set up, make sure that Bluetooth is enabled on both your device and the robot itself. The connection can be made by clicking on the `connect` button on the webpage. The `connect` is at the same place on every webpage. When the pop displays, you next want to choose `Web Bluetooth` which will then display all enabled Bluetooth devices nearby. Finally, click on the name of the robots Bluetooth and that is you connected. 
 
-    <p align="center" width="100%">
-        <img width="75%" src="media/connection.gif">
-    </p>
+<p align="center" width="100%">
+    <img width="75%" src="media/connection.gif">
+</p>
     
 To disconnect from the robot, simply click on the `disconnect` button.
 
