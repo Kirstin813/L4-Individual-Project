@@ -1,6 +1,6 @@
 # _Self Driving Robot Using Web Bluetooth on a Smartphone_
 ##### Level 4 Project Academic Year 2021-22
----
+
 ### Project Description 
 
 ##### Inspiration
