@@ -195,7 +195,7 @@ function onResults(results) {
   canvasElement.height = videoElement.videoHeight;
 
 
-  canvasCtx.drawImage(videoElement, 0,  0);
+  //canvasCtx.drawImage(videoElement, 0,  0);
   //console.log(results.image);
   canvasCtx.drawImage(
       results.image, 0, 0, canvasElement.width, canvasElement.height);
@@ -226,6 +226,7 @@ function findCup() {
     maxNumObjects: 3,
   });
   objectron.onResults(onResults);
+  
 
   const camera = new Camera(videoElement, {
     onFrame: async () => {
