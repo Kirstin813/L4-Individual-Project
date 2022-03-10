@@ -1,5 +1,5 @@
-const videoElement = document.querySelector("#video");
-const canvasElement = document.getElementById("canvas");
+const videoElement = document.getElementsByClassName('input_video')[0];
+const canvasElement = document.getElementsByClassName('output_canvas')[0];
 const canvasCtx = canvasElement.getContext('2d');
 
 const btnConnect = document.querySelector('#btnConnect');
