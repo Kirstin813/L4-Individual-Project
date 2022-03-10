@@ -1,6 +1,12 @@
 # _Self Driving Robot Using Web Bluetooth on a Smartphone_
 ##### Level 4 Project Academic Year 2021-22
 
+### Important links 
+
+[Build Instructions](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#build-instructions)
+[Requirements](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#requirements)
+[Connecting to the robot](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#connecting-to-robot)
+
 ### Project Description 
 
 ##### Inspiration
@@ -11,7 +17,7 @@ However, the Deep Racer is extremely expensive for the average student or advanc
 
 ##### Project Aim
 
-The ultimate aim of this project is to investigate ways to create our own self-driving robot by only using a smartphone's camera and web browser to connect to the robot and perform tasks. Our investigation will also look at different frameworks and pre-trained models that are suitted to a web browser on a mobile device and whether these frameworks will be useful for our development when working towards creating a fully self driving car. 
+The ultimate aim of this project is to investigate ways to create our own self-driving robot by only using a smartphone's camera and web browser to connect to the robot and perform tasks. Our investigation will also look at different frameworks and pre-trained models that are suitted to a web browser on a mobile device and whether these frameworks will be useful for our development when working towards creating a fully self-driving car. 
 
 ##### Outline 
 
@@ -23,22 +29,22 @@ Using a given robotic car, pictured below, the smartphone will be placed on the 
 
 Using the robot's actions, the project will be divided into four stages, which increase in difficulty as each stage progresses. 
 
-1. [Follow a Coloured Object](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#object-tracking) 
+1. [Follow a Coloured Object Instructions](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#object-tracking) -- [Follow Coloured Object Web Page](https://kirstin813.github.io/L4-Individual-Project/src/objectTracking/)
     <p align="center" width="100%">
         <img width="33%" src="media/followobject.gif">
     </p>
 
-2. [Follow a Face](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#follow-a-face)
+2. [Follow a Face Instructions](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#follow-a-face) -- [Follow a Face Web Page](https://kirstin813.github.io/L4-Individual-Project/src/followFace/)
     <p align="center" width="100%">
         <img width="75%" src="media/followface.gif">
     </p>
 
-3. [Follow a Black Line](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#follow-a-black-line) 
+3. [Follow a Black Line Instructions](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#follow-a-black-line) -- [Follow a Black Line Web Page](https://kirstin813.github.io/L4-Individual-Project/src/lineTracking/)
     <p align="center" width="100%">
         <img width="33%" src="media/linetracking.gif">
     </p>
 
-4. [Fully Self Driving](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#self-driving) 
+4. [Fully Self-Driving Instructions](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#self-driving) -- [Fully Self-Driving](https://kirstin813.github.io/L4-Individual-Project/src/selfDriving/)
 
 By dividing the sections, there will be an opportunity to learn from each stage and gain a better understanding of what needs to be required for the robot to be fully self-driving. 
 

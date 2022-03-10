@@ -10,7 +10,7 @@ Examples:
 * Run automated tests by running `pytest`
 * Start the software by running `bin/editor.exe` and opening the file `examples/example_01.bin`
 
-#### Requirements
+### Requirements
 For the Web Bluetooth to work, your device needs Bluetooth 4.0-capable adaptor for it to work correctly. Almost all new computers/devices come with this, if not then you will need an external Bluetooth LE dongle if your computer or device:
 * Is an Apple Mac made before 2012
 * Is a Windows PC with a Windows version before 10
@@ -25,7 +25,7 @@ This project has been development using Javascript and Visual Studio Code.
 
 ## Instructions for use
 
-#### Connecting to Robot 
+### Connecting to Robot 
 
 Once everything is set up, make sure that Bluetooth is enabled on both your device and the robot itself. The connection can be made by clicking on the `connect` button on the webpage. The `connect` is at the same place on every webpage. When the pop displays, you next want to choose `Web Bluetooth` which will then display all enabled Bluetooth devices nearby. Finally, click on the name of the robots Bluetooth and that is you connected. 
 
@@ -35,7 +35,7 @@ Once everything is set up, make sure that Bluetooth is enabled on both your devi
     
 To disconnect from the robot, simply click on the `disconnect` button.
 
-#### Object Tracking 
+### Object Tracking 
 
 To work with object tracking visit [here](https://kirstin813.github.io/L4-Individual-Project/src/objectTracking/). To connect to the robot check out the above subsection or alternatively follow this [link](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#connecting-to-robot). 
 
@@ -57,7 +57,7 @@ Congratulations, you're robot is now following a coloured object. To stop the ro
 
 To watch a demo of this stage in action check out: https://youtu.be/LbqPyVP_ZSk
 
-#### Follow a Face
+### Follow a Face
 
 To work with the face tracking stage of this project click [here](https://kirstin813.github.io/L4-Individual-Project/src/followFace/).
 
@@ -75,7 +75,7 @@ Congratulations, the robot is now following your face! To stop and disconnect th
 
 To watch a demo of this stage in action check out: https://youtu.be/tcuBm0bdRoQ
 
-#### Follow a Black Line 
+### Follow a Black Line 
 
 To work with line tracking stage of this project click [here](https://kirstin813.github.io/L4-Individual-Project/src/lineTracking/). Again, connect to the robot using the instructions [here](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#connecting-to-robot).
 
