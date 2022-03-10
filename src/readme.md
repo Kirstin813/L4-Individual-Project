@@ -84,7 +84,7 @@ Once again, place the smartphone onto the mount, switch the camera orientation b
 For this stage, you will need to create your object black circuit line as pictured below. 
 
 <p align="center" width="100%">
-    <img width="33%" height="50%" src="../media/circuit.png">
+    <img width="33%" src="../media/circuit.png">
 </p>
 
 You can create the circuit by either using black tape or black paint. However, black tape is suggested more. You can shape the circuit however you like but **make sure the line is thick enough for the camera to see and that it has no harsh 90 degree angles as it will not turn properly otherwise**. To ensure that the line is thick enough, place the robot on the circuit and line it up with the middle 'sensor' as shown below.
