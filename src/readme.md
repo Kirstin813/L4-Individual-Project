@@ -59,7 +59,7 @@ Below is a demo of this stage working:
 
 *Description of code*
 
-### Fully Self Driving 
+### Self Driving 
 
 *Description of code*
  

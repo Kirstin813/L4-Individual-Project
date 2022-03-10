@@ -23,22 +23,22 @@ Using a given robotic car, pictured below, the smartphone will be placed on the 
 
 Using the robot's actions, the project will be divided into four stages, which increase in difficulty as each stage progresses. 
 
-1. [Follow a Coloured Object](https://kirstin813.github.io/L4-Individual-Project/src/objectTracking/) 
+1. [Follow a Coloured Object](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#object-tracking) 
     <p align="center" width="100%">
         <img width="33%" src="media/followobject.gif">
     </p>
 
-2. [Follow a Face](https://kirstin813.github.io/L4-Individual-Project/src/followFace/)
+2. [Follow a Face](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#follow-a-face)
     <p align="center" width="100%">
         <img width="75%" src="media/followface.gif">
     </p>
 
-3. [Follow a Black Line](https://kirstin813.github.io/L4-Individual-Project/src/lineTracking/) 
+3. [Follow a Black Line](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#follow-a-black-line) 
     <p align="center" width="100%">
         <img width="33%" src="media/linetracking.gif">
     </p>
 
-4. [Fully Self Driving](https://kirstin813.github.io/L4-Individual-Project/src/selfDriving/) 
+4. [Fully Self Driving](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#self-driving) 
 
 By dividing the sections, there will be an opportunity to learn from each stage and gain a better understanding of what needs to be required for the robot to be fully self-driving. 
 
