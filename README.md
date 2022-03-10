@@ -34,6 +34,10 @@ Using the robot's actions, the project will be divided into four stages, which i
     </p>
 
 3. [Follow a Black Line](https://kirstin813.github.io/L4-Individual-Project/src/lineTracking/) 
+    <p align="center" width="100%">
+        <img width="33%" src="media/linetracking.gif">
+    </p>
+
 4. [Fully Self Driving](https://kirstin813.github.io/L4-Individual-Project/src/selfDriving/) 
 
 By dividing the sections, there will be an opportunity to learn from each stage and gain a better understanding of what needs to be required for the robot to be fully self-driving. 
