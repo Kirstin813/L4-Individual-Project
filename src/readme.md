@@ -53,31 +53,27 @@ Once the object colour has been identified, the robot will begin to move forward
     <img width="50%" src="../media/text.png">
 </p>
 
-Congratulations, your robot is now following a coloured object. To stop the robot from tracking the object and stop moving, remove the visiblity of the object from the video feed and then disconnect from the robot. 
+Congratulations, you're robot is now following a coloured object. To stop the robot from tracking the object and stop moving, remove the visiblity of the object from the video feed and then disconnect from the robot. 
 
 To watch a demo of this stage in action check out: https://youtu.be/LbqPyVP_ZSk
 
 ### Follow a Face
 
-This stage utilises [MediaPipe Solutions](https://google.github.io/mediapipe/solutions/solutions.html). Most of the solutions created by MediaPipe are compatiable through webpages on smartphones. The solution used for this stage is [Face Detection](https://google.github.io/mediapipe/solutions/face_detection#javascript-solution-api). This solution is also able to access the camera on a smartphone by using the `<video>` tag in `index.html`. 
+To work with the face tracking stage of this project click [here](https://kirstin813.github.io/L4-Individual-Project/src/followFace/).
 
-**insert visualisation**
+For this stages development, it utilises and expands [MediaPipe Solutions](https://google.github.io/mediapipe/solutions/solutions.html) using its [Face Detection](https://google.github.io/mediapipe/solutions/face_detection#javascript-solution-api) framework for Javascript. Again, connect to the robot using the same instructions as [above](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#connecting-to-robot). 
 
-The solution loads the face detection models which can be used to detect a human face. However, in this stage, the face is only detected once the connect between the webpage and the robot has been made. Again, connection to the robot is similar to how the connection is made in the first stage. Once the connection has been made, face detection begins and can now follow the face on the video feed. 
+Place the smartphone on the mount on the robot and keep the video orientation as it is, using the front facing camera. Once a connection has been made, a bounding box surrounding your face will appear along with red dots for your facial landmarks i.e. nose, eyes, ears, etc. 
 
-**insert visualisation**
+<p align="center" width="100%">
+    <img width="33%" src="../media/boundingbox.png">
+</p>
 
-To track the face, it uses the x coordinate of the nose position. The facial feature was choose as the main feature to follow as it is the most recongisable feature and it is the most centre point of the face. If the x coordinate of the nose moves into the left third of the feed then the robot moves left, if it moves into the right it moves to the right. The only different from the first stage is when the x coordinate is in the middle of the feed then the robot stops moving.
+In this instance, the robot will not move forward if your face is in the centre of the video feed. Instead, it will move left or right depending which way you move around. I would suggest you try placing the robot on a table and start walking around the table and the robot will follow your face as you move about. 
 
-**insert visualisation**
+Congratulations, the robot is now following your face! To stop and disconnect the robot, position you face in the centre to stop the robot moving and then click on the `disconnect` button. 
 
-Below is a demo of this stage working:
-
-**insert demo**
-
-#### Known Issues 
-
-- The feature to switch cameras for this stage does not currently work
+To watch a demo of this stage in action check out: https://youtu.be/tcuBm0bdRoQ
 
 ### Follow a Black Line 
 
