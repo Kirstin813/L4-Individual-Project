@@ -573,3 +573,9 @@
 ### 9 Mar 22
 * *2 hours* Making minor changes to introduction for dissertation 
 * *2 hours* Creating gifs and updating readme 
+
+### 10 Mar 22
+* *4 hours* Creating gifs to display on the readme and writing more for the readme 
+* *1 hour* Continuing implementation of the fully self-driving 
+* *3 hours* Fixing issue with line tracking that present itself
+
