@@ -3,9 +3,9 @@
 
 ### Important links 
 
-[Build Instructions](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#build-instructions)
-[Requirements](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#requirements)
-[Connecting to the robot](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#connecting-to-robot)
+* [Build Instructions](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#build-instructions)
+* [Requirements](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#requirements)
+* [Connecting to the robot](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#connecting-to-robot)
 
 ### Project Description 
 
