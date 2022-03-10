@@ -57,7 +57,7 @@ Congratulations, you're robot is now following a coloured object. To stop the ro
 
 To watch a demo of this stage in action check out: https://youtu.be/LbqPyVP_ZSk
 
-### Follow a Face
+#### Follow a Face
 
 To work with the face tracking stage of this project click [here](https://kirstin813.github.io/L4-Individual-Project/src/followFace/).
 
@@ -75,9 +75,33 @@ Congratulations, the robot is now following your face! To stop and disconnect th
 
 To watch a demo of this stage in action check out: https://youtu.be/tcuBm0bdRoQ
 
-### Follow a Black Line 
+#### Follow a Black Line 
 
-*Description of code*
+To work with line tracking stage of this project click [here](https://kirstin813.github.io/L4-Individual-Project/src/lineTracking/). Again, connect to the robot using the instructions [here](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#connecting-to-robot).
+
+Once again, place the smartphone onto the mount, switch the camera orientation by clicking on `Switch Camera` to access the back facing camera and then to display the video click on `Open Camera`. As for the position of the smartphone, try to angle it downwards as much as possible so that only the circuit is visible to the video feed.
+
+For this stage, you will need to create your object black circuit line as pictured below. 
+
+<p align="center" width="100%">
+    <img width="33%" height="50%" src="../media/circuit.png">
+</p>
+
+You can create the circuit by either using black tape or black paint. However, black tape is suggested more. You can shape the circuit however you like but **make sure the line is thick enough for the camera to see and that it has no harsh 90 degree angles as it will not turn properly otherwise**. To ensure that the line is thick enough, place the robot on the circuit and line it up with the middle 'sensor' as shown below.
+
+<p align="center" width="100%">
+    <img width="33%" src="../media/settingup.gif">
+</p>
+
+If the line does not fill up the majority of the 'sensor' outlined in the white bounding box then it may not work as well so adjusting the line size accordingly. 
+
+Once you have adjusted the line size and positioned the robot on the starting point of the line, it will begin to follow the black line. It will move forward if the middle sensor detects the colour black, move left if the left sensor detects the colour black, and move right if the right sensor detects the colour black. 
+
+Congratulations, the robot can now follow a black circuit line! This would be good to interact with friends and see how long it takes for their robot to complete a round of the circuit!
+
+To stop and disconnect the robot, simply click on the `Stop` button and then the `Disconnect` button.
+
+To watch a demo of this stage in action check out: https://youtu.be/gU-inQBeqLM
 
 ### Self Driving 
 
