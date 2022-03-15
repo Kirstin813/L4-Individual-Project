@@ -5,8 +5,8 @@ const canvasCtx = canvasElement.getContext('2d');
 const btnConnect = document.querySelector('#btnConnect');
 const btnDisconnect = document.querySelector('#btnDisconnect');
 const btnStop = document.querySelector('#btnStop');
-const frontCamera = document.querySelector('#frontCamera');
-const backCamera = document.querySelector('#backCamera');
+const frontCamera = document.querySelector('#btn-front');
+const backCamera = document.querySelector('#btn-back');
 
 
 // connecting to the robot
@@ -30,7 +30,7 @@ frontCamera.addEventListener("click", function() {
     video: {
       width: 500, 
       height: 360,
-      facingMode: "user"
+      facingMode: "environment"
     },
   };
 

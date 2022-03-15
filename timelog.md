@@ -596,4 +596,5 @@
 
 ### 15 Mar 22 
 * *1.5 hours* Typing up my plan for the evaluation section 
+* *2 hours* Continued writing the dissertation 
 
