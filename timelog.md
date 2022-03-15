@@ -577,5 +577,23 @@
 ### 10 Mar 22
 * *4 hours* Creating gifs to display on the readme and writing more for the readme 
 * *1 hour* Continuing implementation of the fully self-driving 
-* *3 hours* Fixing issue with line tracking that present itself
+* *3 hours* Fixing issue with line tracking arose 
+
+### 11 Mar 22
+* *0.5 hour* Meeting with the supervisor 
+* *1 hour* Reading the feedback on the dissertation introduction 
+
+### 12 Mar 22
+* *2 hours* Researching more material for the background section of the dissertation 
+
+### 13 Mar 22
+* *2 hours* Think about how I want to evaluate my project and how I want it to look 
+
+## Week 23
+
+### 14 Mar 22 
+* *1 hour* Dissertation writing 
+
+### 15 Mar 22 
+* *1.5 hours* Typing up my plan for the evaluation section 
 

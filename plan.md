@@ -121,6 +121,10 @@ Updated at the start of each week. Will outline plan for the week and what is ex
     * Update timelogs and plan files 
     * Weekly meeting with the supervisor 
 * **Week 22**
+    * Think of a plan for the evaluation 
+    * Continue withe the implementation 
+    * Weekly meeting with supervisor 
+    * Continue writing the dissertation
 * **Week 23 [TERM ENDS]**
 * **Week 24** Dissertation submission deadline and presentations.
 
