@@ -104,6 +104,7 @@ function draw() {
   
   let colourPixel = findColour(video, colourMatch, tolerance);
   
+
   if(colourPixel != undefined) {
     
     // Draws a small circle around the colour to show that it has been matched 
@@ -122,7 +123,6 @@ function draw() {
 /* Follows the given colour on the canvas */
 function followColour(colourPixel) {
       // If the colour is in the left third of the canvas then robot moves left 
-      console.log(colourPixel);
       if ( (colourPixel.x<=width/3) && (colourPixel.x>=0) ) {
         move(left)
         textSize(15);
@@ -174,8 +174,7 @@ function findColour(vidInput, colour, tolerance) {
       if (r >= colourR-tolerance && r <= colourR+tolerance &&
           g >= colourG-tolerance && g <= colourG+tolerance &&
           b >= colourB-tolerance && b <= colourB+tolerance) {
-          
-          return createVector(x, y);
+            return createVector(x, y);
       }
       
     }

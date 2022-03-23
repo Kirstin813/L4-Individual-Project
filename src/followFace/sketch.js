@@ -7,7 +7,8 @@ const btnfront = document.querySelector('#btn-front');
 const btnback = document.querySelector('#btn-back');
 
 let currentAction;
-
+let end;
+let start;
 /** This section allows the camera to be switched.
  * Current Status: NOT WORKING
  */
@@ -62,10 +63,10 @@ btnback.addEventListener('click', () => {
 });
 */
 
+
 /* Uses the results from the API to identify and track the face */
 function onResults(results) {
   // Draw the overlays i.e. bouding box and landmarks
-  
   canvasCtx.save();
   canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
 
@@ -82,12 +83,15 @@ function onResults(results) {
       color: 'red',
       radius: 5,
     });
-  }
+    end = new Date();
+    millisecondsElapsed = end - start;
 
+    console.log(millisecondsElapsed);
+    
+  }
   canvasCtx.restore();
  
 }
-
 /* Function to move/update the moving action of the robot */
 function move(action) {
   if (action != currentAction) {
@@ -137,10 +141,15 @@ const camera = new Camera(videoElement, {
 camera.start();
 
 
+
 let connection;
 
 function onLine(lineString) {
   console.log(lineString.trim());
+
+  start = new Date();
+
+  console.log(start);
 }
 
 function connect() {

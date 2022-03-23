@@ -83,16 +83,16 @@ body {
   
 .modal-header {
     padding: 2px 16px;
-    background-color: #ecc30b;
-    color: white;
+    background-color: white;
+    color: black;
 }
   
 .modal-body {padding: 2px 16px;}
   
 .modal-footer {
     padding: 2px 16px;
-    background-color: #ecc30b;
-    color: white;
+    background-color: white;
+    color: black;
 }
   
 h1 {

@@ -596,5 +596,37 @@
 
 ### 15 Mar 22 
 * *1.5 hours* Typing up my plan for the evaluation section 
-* *2 hours* Continued writing the dissertation 
+* *3 hours* Continued writing the dissertation 
+
+### 16 Mar 22
+* *2 hours* Contined writing the dissertation 
+* *1 hour* Wrote a status report for supervisor
+
+### 17 Mar 22
+* *0.5 hour* Quick meeting with supervisor 
+* *1 hour* Writing the dissertation 
+
+### 18 Mar 22
+* No progress
+
+### 19 Mar 22
+* *2 hours* Planned a few evaluation questions and designs 
+* *1 hour* Dissertation writing
+
+### 20 Mar 22
+* *1 hour* Dissertation writing 
+
+## Week 24
+
+### 21 Mar 22
+* *3 hours* Beginning with the evaluations
+
+### 22 Mar 22
+* *3 hours* Gathering and processing evaluation data 
+
+### 23 Mar 22
+* *1 hour* Creating gathers for the data
+* *2 hours* Gathering more data
+
+
 

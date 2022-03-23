@@ -126,5 +126,10 @@ Updated at the start of each week. Will outline plan for the week and what is ex
     * Weekly meeting with supervisor 
     * Continue writing the dissertation
 * **Week 23 [TERM ENDS]**
-* **Week 24** Dissertation submission deadline and presentations.
+    * Quick meeting with the supervisor 
+    * If the implementation of the final stage is not working then move on 
+    * Continue to write the dissertation 
+* **Week 24**
+
+* **Week 25** Dissertation submission deadline and presentations.
 
