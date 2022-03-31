@@ -44,7 +44,7 @@ Using the robot's actions, the project will be divided into four stages, which i
         <img width="33%" src="media/linetracking.gif">
     </p>
 
-4. [Fully Self-Driving Instructions](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#self-driving) -- [Fully Self-Driving](https://kirstin813.github.io/L4-Individual-Project/src/selfDriving/)
+4. [Object Avoidance Instructions](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#object-avoidance---stage-not-complete) -- [Object Avoidance Web Page](https://kirstin813.github.io/L4-Individual-Project/src/objectAvoidance/)
 
 By dividing the sections, there will be an opportunity to learn from each stage and gain a better understanding of what needs to be required for the robot to be fully self-driving. 
 
