@@ -1,12 +1,20 @@
+/**
+ * Using provided starting solution at https://learn.ml5js.org/#/reference/face-api from 
+ * ml5.s which is open source platform providing machine learning models for the 
+ * web browser.
+ */
+
 let faceapi;
 let video;
 let detections;
 let options;
 
+// Option settings from the face detection
 const detectionOptions = {
   withLandmarks: true,
   withDescriptors: false,
 };
+
 
 function setup() {
   var cnv = createCanvas(640, 480);

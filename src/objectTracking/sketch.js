@@ -13,6 +13,11 @@ let options;
 
 let canvas;
 
+/**
+ * This function sets up the canvas frame and captures the video stream 
+ * from the mobile device.
+ */
+
 function setup() {
   canvas = createCanvas(500, 360); 
 
@@ -48,7 +53,9 @@ function setup() {
 }
 
 
-/* Function to switch the camera depending if the switchFlag has been set to true or false */
+/** 
+ * Function to switch the camera depending if the switchFlag has been set to true or false 
+ */
 function switchCamera() {
   switchFlag = !switchFlag;
   stopCapture(); // Stops the current createCapture
@@ -79,7 +86,9 @@ function switchCamera() {
   noStroke();
 }
 
-/* Function to stop the current capture */
+/** 
+ * Function to stop the current capture 
+ */
 function stopCapture() {
   let stream = video.elt.srcObject;
   let tracks = stream.getTracks();
@@ -91,7 +100,9 @@ function stopCapture() {
   video.elt.srcObject = null;
 }
 
-/* Function to move/update the moving action of the robot */
+/** 
+ * Function to move/update the moving action of the robot. 
+ */
 function move(action) {
   if (action != currentAction) {
     currentAction = action;
@@ -99,6 +110,10 @@ function move(action) {
   }
 }
 
+/**
+ * Function that draws the video stream on to the canvas element.
+ * Also identifies and tracks the chosen colour.
+ */
 function draw() {
   image(video, 0, 0); // Draw the video feed onto the canvas 
   
@@ -120,7 +135,9 @@ function draw() {
 
 }
 
-/* Follows the given colour on the canvas */
+/** 
+ * Follows the given colour on the canvas 
+ */
 function followColour(colourPixel) {
       // If the colour is in the left third of the canvas then robot moves left 
       if ( (colourPixel.x<=width/3) && (colourPixel.x>=0) ) {
@@ -153,7 +170,15 @@ function mousePressed() {
     
 }
 
-/* Finds the first pixel of the colour that we want to match */
+/** 
+ * Finds the first pixel of the colour that we want to match.
+ * Iterates through the pixel data array and uses the tolerance 
+ * value to find a rough match to the chosen colour. If the pixel colour 
+ * is within the right rangne then it returns its x and y values. 
+ * 
+ * Inspiration taken from https://editor.p5js.org/shawn/sketches/BkwJ6vP2m on 
+ * how to iterate through the pixel data array.
+ */
 function findColour(vidInput, colour, tolerance) {
   
   // RGB pixels of the colour to be matched 
@@ -162,8 +187,8 @@ function findColour(vidInput, colour, tolerance) {
   let colourB = colour[2];
   
   vidInput.loadPixels(); // Loads all of the pixels from the video 
-  for (let y=0; y <vidInput.height; y++){ // Iterating through the y-axis 
-    for (let x=0; x<vidInput.width; x++) { // Iterating through the x-axis 
+  for (let y=0; y < vidInput.height; y++){ // Iterating through the y-axis 
+    for (let x=0; x< vidInput.width; x++) { // Iterating through the x-axis 
       
       let index = (y * video.width + x) * 4; 
       
@@ -174,12 +199,21 @@ function findColour(vidInput, colour, tolerance) {
       if (r >= colourR-tolerance && r <= colourR+tolerance &&
           g >= colourG-tolerance && g <= colourG+tolerance &&
           b >= colourB-tolerance && b <= colourB+tolerance) {
+            /* For testing purposes - uncomment this line */
+            // console.log(x + " " + y);
             return createVector(x, y);
       }
       
     }
   }
 }
+
+
+/**
+ * Using the connection setup in https://editor.p5js.org/jgrizou/sketches/osAAXLUtL 
+ * which uses UART.js to communicate with the robot https://github.com/espruino/Espruino
+ */
+
 
 let connection;
 
@@ -257,6 +291,15 @@ function stop() {
     connection.write("stop();\n");
   }
 }
+
+/**
+ * Modal variables for Instruction popup.
+ * 
+ * Let's the user know how to interact with the web-page.
+ * 
+ * Taken from https://www.w3schools.com/howto/howto_css_modals.asp and 
+ * adapted for this project.
+ */
 
 // Get the modal
 var modal = document.getElementById("myModal");

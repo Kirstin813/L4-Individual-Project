@@ -103,6 +103,10 @@
 
   }
 
+  /** 
+   * Draws video stream onto canvas and adds greyscale filter.
+   * Divides the bottom portion of the screen into three sections to act as sensors.
+   */
   function draw(videoElm) {
 
     canvas.width = videoElm.videoWidth;
@@ -136,7 +140,11 @@
     }, 10);
   }
 
-  // connection variable to store the state of the connection
+  /**
+   * Using the connection setup in https://editor.p5js.org/jgrizou/sketches/osAAXLUtL 
+   * which uses UART.js to communicate with the robot https://github.com/espruino/Espruino
+   */
+
   let connection;
 
   function onLine(lineString) {
@@ -214,6 +222,15 @@
       connection.write("stop();\n");
     }
   }
+
+  /**
+   * Modal variables for Instruction popup.
+   * 
+   * Let's the user know how to interact with the web-page.
+   * 
+   * Taken from https://www.w3schools.com/howto/howto_css_modals.asp and 
+   * adapted for this project.
+   */
   
   // Get the modal
   var modal = document.getElementById("myModal");

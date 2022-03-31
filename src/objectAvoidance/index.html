@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Driving</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/objectron@0.3.1627447724/objectron.js" crossorigin="anonymous"></script>
+
+    <script src="https://www.espruino.com/js/uart.js"></script>
+</head>
+
+<body>
+    <h1><span>Self Driving</span></h1>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal Content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Instructions for use</h2>
+            </div>
+            <div class="modal=body">
+                <p>Some text in the modal..</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Thanks for reading :)</h3>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button class="connection" id="myBtn">Instructions</button>
+        <button class="connection" id="btnStop">Stop</button>
+        <button class="connection right-btn" id="btnDisconnect">Disconnect</button>
+        <button class="connection right-btn" id="btnConnect">Connect</button>
+    </div>
+
+    <!-- Video Feed -->
+    <div class="container">
+        <video id="video" class="input_video" width="500" height="360"></video>
+        <canvas id="canvas" class="output_canvas" width="500" height="360"></canvas>
+    </div>
+
+    <div>
+        <button class="connection" id="btn-front">Front</button>
+        <button class="connection" id="btn-back">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,3 +1,10 @@
+/**
+ * Uses starting implementation from MediaPipe https://github.com/google/mediapipe
+ * where their solutions can be used for commerical use 
+ * 
+ * Utilises https://google.github.io/mediapipe/solutions/face_detection.html
+ */
+
 const videoElement = document.getElementsByClassName('input_video')[0];
 const canvasElement = document.getElementsByClassName('output_canvas')[0];
 const canvasCtx = canvasElement.getContext('2d');
@@ -7,8 +14,8 @@ const btnfront = document.querySelector('#btn-front');
 const btnback = document.querySelector('#btn-back');
 
 let currentAction;
-let end;
-let start;
+//let end; - uncomment if testing
+//let start; - uncomment if testing
 /** This section allows the camera to be switched.
  * Current Status: NOT WORKING
  */
@@ -83,11 +90,15 @@ function onResults(results) {
       color: 'red',
       radius: 5,
     });
+    /*
+
+    Testing code - uncomment if using
+
     end = new Date();
     millisecondsElapsed = end - start;
 
     console.log(millisecondsElapsed);
-    
+    */
   }
   canvasCtx.restore();
  
@@ -140,16 +151,21 @@ const camera = new Camera(videoElement, {
 });
 camera.start();
 
-
+/**
+ * Using the connection setup in https://editor.p5js.org/jgrizou/sketches/osAAXLUtL 
+ * which uses UART.js to communicate with the robot https://github.com/espruino/Espruino
+ */
 
 let connection;
 
 function onLine(lineString) {
   console.log(lineString.trim());
 
+  /* Uncomment if testing
   start = new Date();
 
   console.log(start);
+  */
 }
 
 function connect() {
@@ -222,6 +238,15 @@ function stop() {
     connection.write("stop();\n");
   }
 }
+
+/**
+ * Modal variables for Instruction popup.
+ * 
+ * Let's the user know how to interact with the web-page.
+ * 
+ * Taken from https://www.w3schools.com/howto/howto_css_modals.asp and 
+ * adapted for this project.
+ */
 
 // Get the modal
 var modal = document.getElementById("myModal");

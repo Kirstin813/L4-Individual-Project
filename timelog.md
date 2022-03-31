@@ -627,6 +627,41 @@
 ### 23 Mar 22
 * *1 hour* Creating gathers for the data
 * *2 hours* Gathering more data
+* *3 hours* Dissertation writing
+
+### 24 Mar 22
+* *8 hours* Editting and writing dissertation
+
+### 25 Mar 22
+* *0.5 hour* Meeting with the supervisor
+* *4 hours* Continue writing the dissertation
+
+### 26 Mar 22
+* *5 hours* Writing the dissertation 
+* *3 hours* Plotting evaluation data
+
+### 27 Mar 22
+* *2 hours* Gathering more evaluation data
+* *4 hours* Writing the dissertation
+
+## Week 25
+
+### 28 Mar 22
+* *8 hours* Writing the dissertation 
+
+### 29 Mar 22
+* *4 hours* Fixing and plotting graphs 
+* *2 hours* Adding figures to dissertation 
+* *3 hours* Continue writing dissertation
+
+### 30 Mar 22
+* *5 hours* Writing the dissertation 
+* *2 hours* Editting dissertation based on the comments from the supervisor
+
+### 31 Mar 22
+* *2 hours* Adding references to code and updating readme
+
+### 1 Apr 22
 
 
 

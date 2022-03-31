@@ -1,6 +1,6 @@
 /**
  * Using the connection setup in https://editor.p5js.org/jgrizou/sketches/osAAXLUtL 
- * which uses UART.js to communicate with the robot
+ * which uses UART.js to communicate with the robot https://github.com/espruino/Espruino
  */
 
 var connection;
@@ -79,6 +79,16 @@ function stop() {
     connection.write("stop();\n");
   }
 }
+
+/**
+ * Modal variables for Instruction popup.
+ * 
+ * Let's the user know how to interact with the web-page.
+ * 
+ * Taken from https://www.w3schools.com/howto/howto_css_modals.asp and 
+ * adapted for this project.
+ */
+
 
 // Get the modal
 var modal = document.getElementById("myModal");

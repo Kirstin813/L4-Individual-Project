@@ -130,6 +130,13 @@ Updated at the start of each week. Will outline plan for the week and what is ex
     * If the implementation of the final stage is not working then move on 
     * Continue to write the dissertation 
 * **Week 24**
+    * Final quick meeting with the supervisor 
+    * Send a draft for review 
+    * Graph evaluation data 
+    * Continue to write the dissertation.
 
 * **Week 25** Dissertation submission deadline and presentations.
+    * Create a video presentation 
+    * Make final changes to the dissertation 
+    * Submit before the deadline
 

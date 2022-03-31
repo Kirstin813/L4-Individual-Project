@@ -103,7 +103,8 @@ To stop and disconnect the robot, simply click on the `Stop` button and then the
 
 To watch a demo of this stage in action check out: https://youtu.be/gU-inQBeqLM
 
-### Self Driving 
+### Object Avoidance - Stage Not Complete
 
-*Description of code*
+To work with object avoidance stage of this project click [here](https://kirstin813.github.io/L4-Individual-Project/src/objectAvoidance/). Again, connect to the robot using the instructions [here](https://github.com/Kirstin813/L4-Individual-Project/tree/main/src#connecting-to-robot).
 
+Currently, this stage only works on desktop browsers and has not fully integrated the use of the robot. This stage only works with the model from [MediaPipe](https://google.github.io/mediapipe/solutions/objectron.html) to detect a mug. To see this in action, take a mug of any size, and place it in front of your desktop webcam. Once the model recognises the mug it will display a 3D bounding box around the mug. 
