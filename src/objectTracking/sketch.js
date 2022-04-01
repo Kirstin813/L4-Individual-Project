@@ -53,15 +53,18 @@ function setup() {
   colourMatch = color(255, 150, 0);  // Initial colour to match 
 }
 
+/**
+ * Function to centre the canvas when window size changes
+ */
 function centerCanvas() {
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   canvas.position(x, y);
-
-  //console.log(windowWidth);
 }
 
-
+/**
+ * Calling the center functon when window size changes
+ */
 function windowResized() {
   centerCanvas();
 }

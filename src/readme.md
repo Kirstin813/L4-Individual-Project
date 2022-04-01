@@ -1,14 +1,15 @@
 ## Build Instructions
 
-### Build steps - TODO
-List the steps required to build software. 
-Hopefully something simple like `pip install -e .` or `make` or `cd build; cmake ..`. In
-some cases you may have much more involved setup required.
-### Test steps - TODO
-List steps needed to show your software works. This might be running a test suite, or just starting the program; but something that could be used to verify your code is working correctly.
-Examples:
-* Run automated tests by running `pytest`
-* Start the software by running `bin/editor.exe` and opening the file `examples/example_01.bin`
+### Build steps
+
+This project has yet to be published on a npm package so for now, to build this project download the .git folder which can be done through HTTPS.
+
+        cd ~/Desktop
+		git clone https://github.com/Kirstin813/L4-Individual-Project.git
+
+Now that you have the project local. You can create a local live server on Visual Studio Code using this link https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer 
+
+Alternatively, to view the web-pages and this project, it is already hosted on GitHub pages and can be view from https://kirstin813.github.io/L4-Individual-Project/
 
 ### Requirements
 For the Web Bluetooth to work, your device needs Bluetooth 4.0-capable adaptor for it to work correctly. Almost all new computers/devices come with this, if not then you will need an external Bluetooth LE dongle if your computer or device:

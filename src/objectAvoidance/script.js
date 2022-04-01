@@ -3,6 +3,8 @@
  * where their solutions can be used for commerical use 
  * 
  * Utilises https://google.github.io/mediapipe/solutions/objectron.html
+ * 
+ * Implementation Status: Unfinished
  */
 
 const videoElement = document.getElementsByClassName('input_video')[0];
@@ -31,6 +33,7 @@ btnStop.addEventListener("click", function() {
   stop();
 });
 
+// switch to the back facing camera 
 frontCamera.addEventListener("click", function() {
 
   const constraints = {
@@ -45,6 +48,7 @@ frontCamera.addEventListener("click", function() {
 
 });
 
+// switch to the front facing camera
 backCamera.addEventListener("click", function() {
 
   const constraints = {
@@ -190,10 +194,11 @@ window.onclick = function(event) {
   }
 }
 
-
+/* Loading the model */
 const drawingUtils = window;
 const mpObjectron = window;
 
+/* Draw the bounding box and centre point of the object */
 function onResults(results) {
   canvasCtx.save();
   canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
@@ -201,9 +206,6 @@ function onResults(results) {
   canvasElement.width = videoElement.videoWidth;
   canvasElement.height = videoElement.videoHeight;
 
-
-  //canvasCtx.drawImage(videoElement, 0,  0);
-  //console.log(results.image);
   canvasCtx.drawImage(
       results.image, 0, 0, canvasElement.width, canvasElement.height);
   if (!!results.objectDetections) {
@@ -212,8 +214,6 @@ function onResults(results) {
       const landmarks = detectedObject.keypoints.map(x => x.point2d);
       // 3d -console.log(detectedObject.keypoints.map(x => x.point3d));
       // Draw bounding box.
-
-      //console.log(landmarks);
       drawingUtils.drawConnectors(canvasCtx, landmarks,
           mpObjectron.BOX_CONNECTIONS, {color: '#FF0000'});
       // Draw centroid.
@@ -223,7 +223,7 @@ function onResults(results) {
   canvasCtx.restore();
 }
 
-
+/* Identify the object */
 function findCup() {
   const objectron = new Objectron({locateFile: (file) => {
     return `https://cdn.jsdelivr.net/npm/@mediapipe/objectron@0.3.1627447724/${file}`;

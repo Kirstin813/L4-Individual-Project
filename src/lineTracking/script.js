@@ -1,10 +1,14 @@
 (() => {
+  /* Variables for the video stream and canvas */
   const videoElm = document.querySelector('#video');
-  const btnFront = document.querySelector('#btn-front');
-  const btnBack = document.querySelector('#btn-back');
   const canvas = document.getElementById("canvas");
   var context = canvas.getContext('2d');
-  let currentAction;
+
+  /* Buttons to switch the camera */
+  const btnFront = document.querySelector('#btn-front');
+  const btnBack = document.querySelector('#btn-back');
+
+  let currentAction; // stores the current action the robot is taking
 
   const supports = navigator.mediaDevices.getSupportedConstraints();
   if (!supports['facingMode']) {
@@ -37,12 +41,14 @@
     videoElm.play();
   }
 
+  // switch to the back facing camera
   btnBack.addEventListener('click', () => {
     capture('environment');
 
     draw(videoElm);
   });
 
+  // switch to the front facing camera
   btnFront.addEventListener('click', () => {
     capture('user');
 

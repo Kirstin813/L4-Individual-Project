@@ -16,10 +16,10 @@ const btnback = document.querySelector('#btn-back');
 let currentAction;
 //let end; - uncomment if testing
 //let start; - uncomment if testing
+
 /** This section allows the camera to be switched.
  * Current Status: NOT WORKING
  */
-
 function setupCamera() {
 
   const supports = navigator.mediaDevices.getSupportedConstraints();
@@ -91,7 +91,6 @@ function onResults(results) {
       radius: 5,
     });
     /*
-
     Testing code - uncomment if using
 
     end = new Date();

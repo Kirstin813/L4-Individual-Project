@@ -667,5 +667,5 @@
 * *2 hours* Final dissertation changes 
 * *2 hours* Editing presentation 
 
-
+## Total Hours - 378 hours
 
