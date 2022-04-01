@@ -21,10 +21,11 @@ let canvas;
 function setup() {
   canvas = createCanvas(500, 360); 
 
+
   /* Center the video */
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
-  canvas.position(x, y);
+  canvas.position(x, y-50);
 
 
   /* Default option is front facing camera */
@@ -45,11 +46,24 @@ function setup() {
 
   /* Adding a "switch camera" button to be able to switch the camera using createCapture */
   switchButton = createButton('Switch Camera');
-  switchButton.position(10, y+400);
+  switchButton.position(10, y+15);
   switchButton.style("color: white; padding: 10px 5px; background-color: #4DA167; font-size: 12px; border-radius: 10px; margin: 5px;")
   switchButton.mousePressed(switchCamera);
   
   colourMatch = color(255, 150, 0);  // Initial colour to match 
+}
+
+function centerCanvas() {
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  canvas.position(x, y);
+
+  //console.log(windowWidth);
+}
+
+
+function windowResized() {
+  centerCanvas();
 }
 
 
