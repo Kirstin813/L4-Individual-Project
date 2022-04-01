@@ -7,7 +7,7 @@ This project has yet to be published on a npm package so for now, to build this 
         cd ~/Desktop
 		git clone https://github.com/Kirstin813/L4-Individual-Project.git
 
-Now that you have the project local. You can create a local live server on Visual Studio Code using this link https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer 
+Now that you have the project locally. You can create a local live server on Visual Studio Code using this link https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer to host the webpages on your local device.
 
 Alternatively, to view the web-pages and this project, it is already hosted on GitHub pages and can be view from https://kirstin813.github.io/L4-Individual-Project/
 
