@@ -660,8 +660,12 @@
 
 ### 31 Mar 22
 * *2 hours* Adding references to code and updating readme
+* *2 hours* Recording video presentation 
+* *4 hours* Making additional changes to the dissertation
 
-### 1 Apr 22
+### 1 Apr 22 - Submission Deadline
+* *2 hours* Final dissertation changes 
+* *2 hours* Editing presentation 
 
 
 

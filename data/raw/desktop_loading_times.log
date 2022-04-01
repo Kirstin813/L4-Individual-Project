@@ -1,0 +1,306 @@
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:39:39 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 21
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:39:55 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 17
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:40:05 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 11
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:40:25 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 32
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:41:01 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 22
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:41:18 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 27
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:41:44 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 29
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:42:04 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 42
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:42:24 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 27
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:42:40 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 33
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:42:54 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 34
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:43:42 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 30
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:43:55 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 15
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:44:01 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 8
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:44:50 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 28
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:45:13 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 33
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:45:23 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 26
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:45:51 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 18
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:49:04 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 30
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:49:15 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 25
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:49:25 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 33
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:49:33 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 30
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:49:42 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 24
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:50:00 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 27
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:50:17 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 34
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:50:24 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 30
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:50:36 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 12
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:50:45 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 18
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:51:00 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 12
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:51:11 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 32
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:51:22 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 9
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:51:32 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 38
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:54:32 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 26
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
+uart.js:509 <UART> Web Bluetooth not supported, Serving off HTTP (not HTTPS) - Web Bluetooth not enabled
+uart.js:509 <UART> Web Serial not supported, Serving off HTTP (not HTTPS) - Web Serial not enabled
+uart.js:509 <UART> Device Name:       MDBT42Q babf
+uart.js:509 <UART> Device ID:         jKMmhc8ZTjKyRgS0/0EwkQ==
+uart.js:509 <UART> Connected
+sketch.js:148 <- Serial1
+sketch.js:152 Wed Mar 23 2022 17:54:49 GMT+0000 (Greenwich Mean Time)
+sketch.js:89 25
+uart.js:509 <UART> Disconnected (gattserverdisconnected)
